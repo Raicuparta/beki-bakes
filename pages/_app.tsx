@@ -17,6 +17,9 @@ const theme = createTheme({
       secondary: '#002555',
     },
   },
+  shape: {
+    borderRadius: 0,
+  },
   //@ts-ignore
   shadows: []
 });

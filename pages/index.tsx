@@ -45,13 +45,12 @@ export default function Home() {
 
       <main>
         <Stack sx={{ my: 3 }}>
-          <Image src="/snail.svg" alt="beki bakes" width={75} height={75} />
+          <Image src="/snail.svg" alt="beki bakes" width={65} height={65} />
           <Typography
-            variant="h3"
             component="h1"
             align="center"
             color="text.secondary"
-            sx={{ fontWeight: 'bold' }}
+            sx={{ fontWeight: 'bold', fontSize: 30 }}
           >
             beki
             <Box component="span">
@@ -60,7 +59,7 @@ export default function Home() {
           </Typography>
         </Stack>
 
-        <Grid container spacing={4} sx={{ mb: 3 }}>
+        <Grid container spacing={2} sx={{ mb: 2 }}>
           {products.map(product => (
             <Grid
               key={product.name}
