@@ -3,15 +3,23 @@ import type { AppProps } from 'next/app'
 import { createTheme, CssBaseline, ThemeProvider } from '@material-ui/core';
 
 const theme = createTheme({
+  typography: {
+    fontFamily: [
+      '"Bona Nova"',
+    ].join(','),
+  },
   palette: {
     background: {
       default: '#e4fffe',
-      paper: '#ffffff',
+      paper: '#002555',
     },
     text: {
-      secondary: '#276777',
-    }
+      primary: 'white',
+      secondary: '#002555',
+    },
   },
+  //@ts-ignore
+  shadows: []
 });
 
 function MyApp({ Component, pageProps }: AppProps) {

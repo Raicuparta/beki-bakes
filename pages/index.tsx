@@ -45,14 +45,16 @@ export default function Home() {
 
       <main>
         <Stack sx={{ my: 3 }}>
-          <Image src="/snail.svg" alt="beki bakes" width={100} height={100} />
+          <Image src="/snail.svg" alt="beki bakes" width={75} height={75} />
           <Typography
-            variant="h2"
+            variant="h3"
             component="h1"
             align="center"
+            color="text.secondary"
+            sx={{ fontWeight: 'bold' }}
           >
             beki
-            <Box component="span" sx={{ color: 'text.secondary' }}>
+            <Box component="span">
               bakes
             </Box>
           </Typography>
@@ -66,8 +68,11 @@ export default function Home() {
               xs={12}
               sm={6}
             >
-              <Card>
-                <CardActionArea component="a" href={`/photos/${product.photo}.jpg`}>
+              <Card sx={{ transition: '0.2s', '&:hover': { transform: 'scale(1.03)' } }}>
+                <CardActionArea
+                  component="a"
+                  href={`/photos/${product.photo}.jpg`}
+                >
                   <CardMedia
                     component="img"
                     alt={product.name}
