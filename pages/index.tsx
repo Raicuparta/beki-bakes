@@ -60,7 +60,7 @@ export default function Home() {
           </Typography>
         </Stack>
 
-        <Grid container spacing={4}>
+        <Grid container spacing={4} sx={{ mb: 3 }}>
           {products.map(product => (
             <Grid
               key={product.name}
