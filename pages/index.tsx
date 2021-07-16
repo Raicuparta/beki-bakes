@@ -21,22 +21,22 @@ import {
 const products = [{
   name: 'Roll cake',
   photo: 'roll-cake',
-  price: 10,
+  price: "10.00",
 },
 {
   name: 'Macarrons',
   photo: 'macarrons',
-  price: 10,
+  price: "2.00",
 },
 {
   name: 'Cookies',
   photo: 'cookies',
-  price: 10,
+  price: "1.50",
 },
 {
   name: 'Pound cake',
   photo: 'pound-cake',
-  price: 10,
+  price: "3.00",
 }]
 
 export default function Home() {
@@ -58,7 +58,6 @@ export default function Home() {
           <Typography
             component="h1"
             align="center"
-            // color="text.pri"
             sx={{ fontWeight: 'bold', fontSize: 30 }}
           >
             beki
@@ -103,7 +102,7 @@ export default function Home() {
                 xs={12}
                 sm={6}
               >
-                <Card sx={{ transition: '0.2s', '&:hover': { transform: 'scale(1.03)' } }}>
+                <Card>
                   <CardActionArea
                     component="a"
                     href={`/photos/${product.photo}.jpg`}
