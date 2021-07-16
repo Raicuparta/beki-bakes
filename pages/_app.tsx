@@ -16,6 +16,9 @@ const theme = createTheme({
       primary: 'white',
       secondary: '#002555',
     },
+    primary: {
+      main: '#002555',
+    }
   },
   shape: {
     borderRadius: 0,
