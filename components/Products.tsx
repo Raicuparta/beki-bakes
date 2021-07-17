@@ -119,7 +119,10 @@ export const Products = ({
           </Stack>
           <Grid container spacing={2} sx={{ mb: 2 }}>
             {Object.values(products).map((product) => product.id === selectedProductId ? (
-              <SelectedProduct product={product} />
+              <SelectedProduct
+                key={product.id}
+                product={product}
+              />
             ) : (
               <ListedProduct
                 key={product.id}
