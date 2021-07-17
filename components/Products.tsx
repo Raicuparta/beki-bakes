@@ -1,10 +1,5 @@
-/* eslint-disable @next/next/link-passhref */
 /* eslint-disable @next/next/no-img-element */
 import {
-  Card,
-  CardActionArea,
-  CardContent,
-  CardMedia,
   Container,
   Typography,
   Stack,
@@ -20,27 +15,33 @@ import {
   Facebook as FacebookIcon,
 } from '@material-ui/icons'
 import { motion } from 'framer-motion'
+import { ListedProduct } from './ListedProduct'
 
 const products = {
   rollCake: {
     name: 'Roll cake',
     price: "10.00",
+    id: 'rollCake',
   },
   macaroons: {
     name: 'Macaroons',
     price: "2.00",
+    id: 'macaroons',
   },
   cookies: {
     name: 'Cookies',
     price: "1.50",
+    id: 'cookies',
   },
   poundCake: {
     name: 'Pound cake',
     price: "3.00",
+    id: 'poundCake',
   },
 } as const;
 
 export type ProductId = keyof(typeof products)
+export type Product = typeof products[ProductId];
 
 type Props = {
   selectedProductId?: ProductId;
@@ -66,7 +67,7 @@ export const Products = ({
       </Head>
       <main>
         <Stack sx={{ pt: 3, pb: 1, mb: 2, backgroundColor: 'background.paper', alignItems: 'center' }}>
-          <Link href="/test">
+          <Link href="/">
             <a>
               <motion.figure layoutId="snail">
                 <img
@@ -118,39 +119,11 @@ export const Products = ({
             </IconButton>
           </Stack>
           <Grid container spacing={2} sx={{ mb: 2 }}>
-            {Object.entries(products).map(([id, product]) => (
-              <Grid
-                key={id}
-                item
-                xs={12}
-                sm={6}
-              >
-                <motion.div layoutId={"card-" + product.name}>
-                  <Card>
-                    <Link href={`/${id}`} passHref>
-                      <CardActionArea component="a">
-                        <CardMedia
-                          component="img"
-                          alt={product.name}
-                          title={product.name}
-                          image={`/photos/${id}.jpg`}
-                          height={230}
-                        />
-                        <CardContent sx={{ py: 1 }}>
-                          <Stack direction="row" justifyContent="space-between">
-                            <Typography variant="h6">
-                              {product.name}
-                            </Typography>
-                            <Typography variant="h6">
-                              €{product.price}
-                            </Typography>
-                          </Stack>
-                        </CardContent>
-                      </CardActionArea>
-                    </Link>
-                  </Card>
-                </motion.div>
-              </Grid>
+            {Object.values(products).map((product) => (
+              <ListedProduct
+                key={product.id}
+                product={product}
+              />
             ))}
           </Grid>
         </Container>
