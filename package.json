@@ -16,6 +16,7 @@
     "@emotion/styled": "^11.3.0",
     "@material-ui/core": "^5.0.0-beta.1",
     "@material-ui/icons": "^5.0.0-beta.1",
+    "framer-motion": "^4.1.17",
     "gh-pages": "^3.2.3",
     "next": "11.0.1",
     "react": "17.0.2",

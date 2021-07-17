@@ -1,6 +1,7 @@
 // import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { createTheme, CssBaseline, ThemeProvider } from '@material-ui/core';
+import { AnimateSharedLayout } from 'framer-motion';
 
 const theme = createTheme({
   typography: {
@@ -31,7 +32,9 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Component {...pageProps} />
+      <AnimateSharedLayout>
+        <Component {...pageProps} />
+      </AnimateSharedLayout>
     </ThemeProvider>
   );
 }
