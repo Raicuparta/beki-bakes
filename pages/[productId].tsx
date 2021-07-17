@@ -15,6 +15,7 @@ export const getStaticProps = () => ({ props: {} });
 
 export const getStaticPaths = () => Object.keys(products).map(productId => ({
   params: { productId },
+  fallback: false,
 }));
 
 export default Test;
