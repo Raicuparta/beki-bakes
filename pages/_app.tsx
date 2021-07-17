@@ -32,7 +32,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <AnimateSharedLayout>
+      <AnimateSharedLayout type="crossfade">
         <Component {...pageProps} />
       </AnimateSharedLayout>
     </ThemeProvider>
