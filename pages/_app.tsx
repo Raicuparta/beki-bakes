@@ -1,6 +1,6 @@
 // import '../styles/globals.css'
 import type { AppProps } from 'next/app'
-import { createTheme, CssBaseline, ThemeProvider } from '@material-ui/core';
+import { Box, createTheme, CssBaseline, GlobalStyles, ThemeProvider } from '@material-ui/core';
 import { AnimateSharedLayout } from 'framer-motion';
 
 const theme = createTheme({
@@ -25,12 +25,26 @@ const theme = createTheme({
     borderRadius: 0,
   },
   //@ts-ignore
-  shadows: []
+  shadows: [],
 });
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={theme}>
+      <Box
+        sx={{
+          position: 'fixed',
+          top: '-50vh',
+          left: '-50vw',
+          width: '200vw',
+          height: '200vh',
+          zIndex: -1,
+          // @ts-ignore
+          backgroundImage: 'url(/transparent-snail.png)',
+          backgroundSize: '100px',
+          transform: 'rotate(45deg)',
+        }}
+      />
       <CssBaseline />
       <AnimateSharedLayout type="crossfade">
         <Component {...pageProps} />
