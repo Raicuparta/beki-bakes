@@ -13,9 +13,11 @@ const Test = () => {
 
 export const getStaticProps = () => ({ props: {} });
 
-export const getStaticPaths = () => Object.keys(products).map(productId => ({
-  params: { productId },
+export const getStaticPaths = () => ({
+  paths: Object.keys(products).map(productId => ({
+    params: { productId },
+  })),
   fallback: false,
-}));
+});
 
 export default Test;
