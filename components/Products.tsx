@@ -14,7 +14,7 @@ import {
   Instagram as InstagramIcon,
   Facebook as FacebookIcon,
 } from '@material-ui/icons'
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import { ListedProduct } from './ListedProduct'
 import { SelectedProduct } from './SelectedProduct'
 
@@ -118,17 +118,20 @@ export const Products = ({
             </IconButton>
           </Stack>
           <Grid container spacing={2} sx={{ mb: 2 }}>
-            {Object.values(products).map((product) => product.id === selectedProductId ? (
-              <SelectedProduct
-                key={product.id}
-                product={product}
-              />
-            ) : (
+            {Object.values(products).map((product) => (
               <ListedProduct
                 key={product.id}
                 product={product}
+                selected={selectedProductId === product.id}
               />
             ))}
+            <AnimatePresence>
+              {selectedProductId !== undefined && (
+                <SelectedProduct
+                  product={products[selectedProductId]}
+                />
+              )}
+            </AnimatePresence>
           </Grid>
         </Container>
       </main>

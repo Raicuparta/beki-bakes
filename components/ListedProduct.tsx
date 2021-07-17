@@ -7,11 +7,12 @@ import {
   Stack,
   Grid,
 } from '@material-ui/core';
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Link from 'next/link';
 import {
   MotionCardMedia,
   MotionTypography,
+  MotionGrid,
 } from './Motion';
 
 import { Product } from "./Products";
@@ -28,46 +29,46 @@ export const ListedProduct = ({ selected, product: {
 } }: Props) => {
   const motionId = selected ? 'NOTHING' : id;
   return (
-    <Grid
+    <MotionGrid
       key={id}
       item
       xs={12}
       sm={6}
+      layoutId={"card-" + motionId}
+      sx={{ zIndex: selected ? 1 : 0 }}
     >
-      <motion.div layoutId={"card-" + motionId}>
-        <Card>
-          <Link
-            href={`/${id}`}
-            passHref
-            scroll={false}
-          >
-            <CardActionArea component="a">
-              <MotionCardMedia
-                title={name}
-                image={`/photos/${id}.jpg`}
-                layoutId={"photo-" + motionId}
-                sx={{ height: 230 }}
-              />
-              <CardContent sx={{ py: 1 }}>
-                <Stack direction="row" justifyContent="space-between">
-                  <MotionTypography
-                    variant="h6"
-                    layoutId={"name-" + motionId}
-                  >
-                    {name}
-                  </MotionTypography>
-                  <MotionTypography
-                    variant="h6"
-                    layoutId={"price-" + motionId}
-                  >
-                    €{price}
-                  </MotionTypography>
-                </Stack>
-              </CardContent>
-            </CardActionArea>
-          </Link>
-        </Card>
-      </motion.div>
-    </Grid>
+      <Card>
+        <Link
+          href={`/${id}`}
+          passHref
+          scroll={false}
+        >
+          <CardActionArea component="a">
+            <MotionCardMedia
+              title={name}
+              image={`/photos/${id}.jpg`}
+              layoutId={"photo-" + motionId}
+              sx={{ height: 230 }}
+            />
+            <CardContent sx={{ py: 1 }}>
+              <Stack direction="row" justifyContent="space-between">
+                <MotionTypography
+                  variant="h6"
+                  layoutId={"name-" + motionId}
+                >
+                  {name}
+                </MotionTypography>
+                <MotionTypography
+                  variant="h6"
+                  layoutId={"price-" + motionId}
+                >
+                  €{price}
+                </MotionTypography>
+              </Stack>
+            </CardContent>
+          </CardActionArea>
+        </Link>
+      </Card>
+    </MotionGrid>
   );
 };
