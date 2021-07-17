@@ -41,7 +41,7 @@ export const SelectedProduct = ({ product }: Props) => {
               sx={{ height: 350 }}
             >
               <Link href="/" passHref>
-                <Fab sx={{ m: 2 }}>
+                <Fab color="primary" sx={{ m: 2 }}>
                   <ArrowLeftIcon fontSize="large" />
                 </Fab>
               </Link>
