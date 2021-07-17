@@ -43,7 +43,6 @@ export const ListedProduct = ({ selected, product: {
           >
             <CardActionArea component="a">
               <MotionCardMedia
-                alt={name}
                 title={name}
                 image={`/photos/${id}.jpg`}
                 layoutId={"photo-" + motionId}

@@ -34,7 +34,6 @@ export const SelectedProduct = ({ product }: Props) => {
         <motion.div layoutId={"card-" + id}>
           <Card sx={{ height: '100vh', width: '100vw' }}>
             <MotionCardMedia
-              alt={name}
               title={name}
               image={`/photos/${id}.jpg`}
               layoutId={"photo-" + id}

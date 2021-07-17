@@ -18,7 +18,7 @@ import { motion } from 'framer-motion'
 import { ListedProduct } from './ListedProduct'
 import { SelectedProduct } from './SelectedProduct'
 
-const products = {
+export const products = {
   rollCake: {
     name: 'Roll cake',
     price: "10.00",
