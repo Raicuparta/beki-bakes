@@ -43,12 +43,11 @@ export const ListedProduct = ({ selected, product: {
           >
             <CardActionArea component="a">
               <MotionCardMedia
-                component={"img"}
                 alt={name}
                 title={name}
                 image={`/photos/${id}.jpg`}
-                height={230}
                 layoutId={"photo-" + motionId}
+                sx={{ height: 230 }}
               />
               <CardContent sx={{ py: 1 }}>
                 <Stack direction="row" justifyContent="space-between">
