@@ -40,7 +40,11 @@ export const SelectedProduct = ({ product }: Props) => {
               layoutId={"photo-" + id}
               sx={{ height: 350 }}
             >
-              <Link href="/" passHref>
+              <Link
+                href="/"
+                scroll={false}
+                passHref
+              >
                 <Fab color="primary" sx={{ m: 2 }}>
                   <ArrowLeftIcon fontSize="large" />
                 </Fab>
