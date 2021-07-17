@@ -9,48 +9,67 @@ import {
 } from '@material-ui/core';
 import { motion } from "framer-motion";
 import Link from 'next/link';
+import {
+  MotionCardMedia,
+  MotionTypography,
+} from './Motion';
 
 import { Product } from "./Products";
 
 type Props = {
   product: Product;
+  selected?: boolean;
 };
 
-export const ListedProduct = ({ product: {
+export const ListedProduct = ({ selected, product: {
   id,
   name,
   price,
-} }: Props) => (
-  <Grid
-    key={id}
-    item
-    xs={12}
-    sm={6}
-  >
-    <motion.div layoutId={"card-" + name}>
-      <Card>
-        <Link href={`/${id}`} passHref>
-          <CardActionArea component="a">
-            <CardMedia
-              component="img"
-              alt={name}
-              title={name}
-              image={`/photos/${id}.jpg`}
-              height={230}
-            />
-            <CardContent sx={{ py: 1 }}>
-              <Stack direction="row" justifyContent="space-between">
-                <Typography variant="h6">
-                  {name}
-                </Typography>
-                <Typography variant="h6">
-                  €{price}
-                </Typography>
-              </Stack>
-            </CardContent>
-          </CardActionArea>
-        </Link>
-      </Card>
-    </motion.div>
-  </Grid>
-);
+} }: Props) => {
+  const motionId = selected ? 'NOTHING' : id;
+  return (
+    <Grid
+      key={id}
+      item
+      xs={12}
+      sm={6}
+    >
+      <motion.div layoutId={"card-" + motionId}>
+        <Card>
+          <Link
+            href={`/${id}`}
+            passHref
+            scroll={false}
+          >
+            <CardActionArea component="a">
+              <MotionCardMedia
+                component={"img"}
+                alt={name}
+                title={name}
+                image={`/photos/${id}.jpg`}
+                height={230}
+                layoutId={"photo-" + motionId}
+              />
+              <CardContent sx={{ py: 1 }}>
+                <Stack direction="row" justifyContent="space-between">
+                  <MotionTypography
+                    variant="h6"
+                    layoutId={"name-" + motionId}
+                  >
+                    {name}
+                  </MotionTypography>
+                  <MotionTypography
+                    variant="h6"
+                    layoutId={"price-" + motionId}
+                  >
+                    €{price}
+                  </MotionTypography>
+                </Stack>
+              </CardContent>
+            </CardActionArea>
+          </Link>
+        </Card>
+      </motion.div>
+    </Grid>
+  );
+};

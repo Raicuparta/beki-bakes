@@ -16,6 +16,7 @@ import {
 } from '@material-ui/icons'
 import { motion } from 'framer-motion'
 import { ListedProduct } from './ListedProduct'
+import { SelectedProduct } from './SelectedProduct'
 
 const products = {
   rollCake: {
@@ -69,14 +70,12 @@ export const Products = ({
         <Stack sx={{ pt: 3, pb: 1, mb: 2, backgroundColor: 'background.paper', alignItems: 'center' }}>
           <Link href="/">
             <a>
-              <motion.figure layoutId="snail">
-                <img
-                  src="/snail-halfwhite.svg"
-                  alt="beki bakes"
-                  width={75}
-                  height={75}
-                  />
-              </motion.figure>
+              <img
+                src="/snail-halfwhite.svg"
+                alt="beki bakes"
+                width={75}
+                height={75}
+                />
             </a>
           </Link>
           <Typography
@@ -119,7 +118,9 @@ export const Products = ({
             </IconButton>
           </Stack>
           <Grid container spacing={2} sx={{ mb: 2 }}>
-            {Object.values(products).map((product) => (
+            {Object.values(products).map((product) => product.id === selectedProductId ? (
+              <SelectedProduct product={product} />
+            ) : (
               <ListedProduct
                 key={product.id}
                 product={product}
