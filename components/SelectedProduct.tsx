@@ -22,8 +22,6 @@ type Props = {
   product: Product;
 };
 
-const variants = ['Variant A', 'Variant B', 'Variant C'];
-
 export const SelectedProduct = ({ product }: Props) => {
   const { id, name, price } = product;
   return (
@@ -65,9 +63,9 @@ export const SelectedProduct = ({ product }: Props) => {
           </Card>
           <Box>
             <List sx={{ py: 0 }}>
-              {variants.map(variant => (
+              {product.variants.map(variant => (
                 <ListItem
-                  key={variant}
+                  key={variant.name}
                   button
                   sx={{
                     borderBottom: 'solid 2px',
@@ -76,7 +74,7 @@ export const SelectedProduct = ({ product }: Props) => {
                 >
                   <Stack width="100%" direction="row" justifyContent="space-between">
                     <Typography>
-                      {variant}
+                      {variant.name}
                     </Typography>
                   </Stack>
                 </ListItem>

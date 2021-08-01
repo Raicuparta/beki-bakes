@@ -3,39 +3,81 @@ import {
   Grid,
 } from '@material-ui/core'
 import React from 'react'
-import { AnimatePresence } from 'framer-motion'
 import { ListedProduct } from './ListedProduct'
-import { SelectedProduct } from './SelectedProduct'
 
 export const products = {
   rollCake: {
     name: 'Roll cake',
     price: "10.00",
     id: 'rollCake',
+    variants: [
+      {
+        name: 'Chestnut Mousse',
+        picture: 'rollCake',
+      },
+      {
+        name: 'Salted Caramel',
+        picture: 'rollCake',
+      },
+      {
+        name: 'Matcha Adzuki',
+        picture: 'rollCake',
+      },
+    ],
   },
-  macaroons: {
+  macarons: {
     name: 'Macaroons',
     price: "2.00",
-    id: 'macaroons',
+    id: 'macarons',
+    variants: [
+      {
+        name: 'Raspberry',
+        picture: 'macarons',
+      },
+      {
+        name: 'Chocolate',
+        picture: 'macarons',
+      },
+      {
+        name: 'Pistachio',
+        picture: 'macarons',
+      },
+      {
+        name: 'Yuzu',
+        picture: 'macarons',
+      },
+      {
+        name: 'Caramel',
+        picture: 'macarons',
+      },
+    ],
   },
   cookies: {
     name: 'Cookies',
     price: "1.50",
     id: 'cookies',
+    variants: [
+      {
+        name: 'Cookies',
+        picture: 'cookies',
+      },
+    ],
   },
   poundCake: {
     name: 'Pound cake',
     price: "3.00",
     id: 'poundCake',
+    variants: [
+      {
+        name: 'Pound cake',
+        picture: 'poundCake',
+      },
+    ],
   },
 } as const;
 
 export type ProductId = keyof(typeof products)
 export type Product = typeof products[ProductId];
-
-type Props = {
-  selectedProductId?: ProductId;
-}
 
 export const Products = () => (
   <Container maxWidth="sm">
