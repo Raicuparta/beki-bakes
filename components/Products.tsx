@@ -32,11 +32,11 @@ export const products = {
     variants: [
       {
         name: 'Raspberry',
-        picture: 'macarons',
+        picture: 'raspberry',
       },
       {
         name: 'Chocolate',
-        picture: 'macarons',
+        picture: 'chocolate',
       },
       {
         name: 'Pistachio',
