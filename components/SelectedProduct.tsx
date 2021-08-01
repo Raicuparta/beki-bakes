@@ -2,14 +2,16 @@ import {
   Card,
   CardContent,
   Stack,
-  Fab,
   Box,
   List,
   ListItem,
   Typography,
+  Container,
+  ButtonGroup,
+  Button,
 } from '@material-ui/core';
-import Link from 'next/link';
 import React, { useState } from 'react';
+import { Add as AddIcon, Remove as RemoveIcon } from '@material-ui/icons';
 import {
   MotionCardMedia,
   MotionTypography,
@@ -24,6 +26,7 @@ type Props = {
 
 export const SelectedProduct = ({ product }: Props) => {
   const [selectedVariant, setSelectedVariant] = useState(0);
+  const [quantity, setQuantity] = useState(1);
 
   if (!product) {
     return null;
@@ -62,12 +65,33 @@ export const SelectedProduct = ({ product }: Props) => {
                 variant="h6"
                 layoutId={"price-" + id}
               >
-                €{price}
+                €{price * quantity}
               </MotionTypography>
             </Stack>
           </CardContent>
           <span />
         </Card>
+        <Container sx={{ my: 2 }}>
+          <ButtonGroup variant="contained" size="small">
+            <Button disabled={quantity <= 1} onClick={() => {
+              setQuantity(quantity => quantity > 1 ? quantity - 1 : quantity)
+            }}>
+              <RemoveIcon fontSize="small" />
+            </Button>
+            <Button
+              variant="outlined"
+              size="medium"
+              sx={{ pointerEvents: 'none', width: '20px' }}
+            >
+              {quantity}
+            </Button>
+            <Button onClick={() => {
+              setQuantity(quantity => quantity + 1)
+            }}>
+              <AddIcon fontSize="small"  />
+            </Button>
+          </ButtonGroup>
+        </Container>
         <Box>
           <List sx={{ py: 0 }}>
             {product.variants.map((variant, index) => (

@@ -8,7 +8,7 @@ import { ListedProduct } from './ListedProduct'
 export const products = {
   rollCake: {
     name: 'Roll cake',
-    price: "10.00",
+    price: 10.00,
     id: 'rollCake',
     variants: [
       {
@@ -27,7 +27,7 @@ export const products = {
   },
   macarons: {
     name: 'Macaroons',
-    price: "2.00",
+    price: 2.00,
     id: 'macarons',
     variants: [
       {
@@ -54,7 +54,7 @@ export const products = {
   },
   cookies: {
     name: 'Cookies',
-    price: "1.50",
+    price: 1.50,
     id: 'cookies',
     variants: [
       {
@@ -65,7 +65,7 @@ export const products = {
   },
   poundCake: {
     name: 'Pound cake',
-    price: "3.00",
+    price: 3.00,
     id: 'poundCake',
     variants: [
       {
