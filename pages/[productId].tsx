@@ -1,23 +1,29 @@
-import { useRouter } from 'next/dist/client/router'
+import React from 'react';
+import Head from 'next/head'
 
-import { ProductId, Products, products } from '../components'
+import { useRouter } from 'next/dist/client/router'
+import { ProductId, products } from '../components'
+import {
+  SelectedProduct,
+  PageHeader,
+  SocialIcons,
+} from '../components';
 
 const Test = () => {
   const { query } = useRouter();
   const productId = query.productId as ProductId;
 
   return (
-    <Products selectedProductId={productId} />
+    <>
+      <Head>
+        <title>bekibakes</title>
+      </Head>
+      <main>
+        <PageHeader isSmall />
+        <SelectedProduct product={products[productId]} />
+      </main>
+    </>
   );
 };
-
-export const getStaticProps = () => ({ props: {} });
-
-export const getStaticPaths = () => ({
-  paths: Object.keys(products).map(productId => ({
-    params: { productId },
-  })),
-  fallback: false,
-});
 
 export default Test;

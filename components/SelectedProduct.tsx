@@ -2,13 +2,14 @@ import {
   Card,
   CardContent,
   Stack,
-  Container,
   Fab,
+  Box,
+  List,
+  ListItem,
+  Typography,
 } from '@material-ui/core';
-import { ArrowLeft as ArrowLeftIcon } from '@material-ui/icons';
-import { motion } from "framer-motion";
 import Link from 'next/link';
-import { ListedProduct } from './ListedProduct';
+import React from 'react';
 import {
   MotionCardMedia,
   MotionTypography,
@@ -21,6 +22,8 @@ type Props = {
   product: Product;
 };
 
+const variants = ['Variant A', 'Variant B', 'Variant C'];
+
 export const SelectedProduct = ({ product }: Props) => {
   const { id, name, price } = product;
   return (
@@ -29,46 +32,59 @@ export const SelectedProduct = ({ product }: Props) => {
         maxWidth="sm"
         disableGutters
         layoutId={"card-" + id}
-        sx={{
-          position: 'fixed',
-          top: 0,
-          zIndex: 1,
-        }}
       >
-        <Card sx={{ height: '100vh' }}>
-          <MotionCardMedia
-            title={name}
-            image={`/photos/${id}.jpg`}
-            layoutId={"photo-" + id}
-            sx={{ height: 350 }}
-          >
-            <Link
-              href="/"
-              scroll={false}
-              passHref
+        <Box sx={{
+          color: 'text.secondary',
+          bgcolor: 'background.default',
+        }}>
+          <Card>
+            <MotionCardMedia
+              title={name}
+              image={`/photos/${id}.jpg`}
+              layoutId={"photo-" + id}
+              sx={{ height: 350 }}
             >
-              <Fab color="primary" sx={{ m: 2 }}>
-                <ArrowLeftIcon fontSize="large" />
-              </Fab>
-            </Link>
-          </MotionCardMedia>
-          <CardContent sx={{ py: 1 }}>
-            <Stack direction="row" justifyContent="space-between">
-              <MotionTypography
-                variant="h6"
-                layoutId={"name-" + id}
-              >
-                {name}
-              </MotionTypography>
-              <MotionTypography
-                variant="h6"
-                layoutId={"price-" + id}
-              >
-                €{price}
-              </MotionTypography>
-            </Stack>
-          </CardContent>
-        </Card>
+            </MotionCardMedia>
+            <CardContent sx={{ py: 1 }}>
+              <Stack direction="row" justifyContent="space-between">
+                <MotionTypography
+                  variant="h6"
+                  layoutId={"name-" + id}
+                >
+                  {name}
+                </MotionTypography>
+                <MotionTypography
+                  variant="h6"
+                  layoutId={"price-" + id}
+                >
+                  €{price}
+                </MotionTypography>
+              </Stack>
+            </CardContent>
+            <span />
+          </Card>
+          <Box>
+            <List sx={{ py: 0 }}>
+              {variants.map(variant => (
+                <ListItem
+                  key={variant}
+                  button
+                  sx={{
+                    borderBottom: 'solid 2px',
+                    borderBottomColor: 'background.paper',
+                  }}
+                >
+                  <Stack width="100%" direction="row" justifyContent="space-between">
+                    <Typography>
+                      {variant}
+                    </Typography>
+                  </Stack>
+                </ListItem>
+
+              ))}
+            </List>
+          </Box>
+        </Box>
       </MotionContainer>
     </>
   );

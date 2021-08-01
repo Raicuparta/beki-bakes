@@ -1,6 +1,8 @@
+import Head from 'next/head'
+
 import { useRouter } from 'next/dist/client/router';
 import { useEffect } from 'react';
-import { Products } from '../components';
+import { PageHeader, Products, SocialIcons } from '../components';
 
 const Home = () => {
   const { beforePopState } = useRouter();
@@ -15,7 +17,16 @@ const Home = () => {
   }, [beforePopState]);
   
   return (
-    <Products />
+    <>
+      <Head>
+        <title>bekibakes</title>
+      </Head>
+      <main>
+        <PageHeader />
+        <SocialIcons />
+        <Products />
+      </main>
+    </>
   );
 };
 
