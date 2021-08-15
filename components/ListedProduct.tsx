@@ -47,15 +47,15 @@ export const ListedProduct = ({ selected, product: {
           scroll={false}
         >
           <CardActionArea component="a">
-            <Box sx={{ height: 230, position: 'relative' }}>
-              <Image
-                title={name}
-                alt={name}
-                src={`/photos/${id}/${id}.jpg`}
-                layout="fill"
-                objectFit="cover"
-              />
-            </Box>
+            <Image
+              title={name}
+              alt={name}
+              src={`/photos/${id}/${id}.jpg`}
+              layout="responsive"
+              width={16}
+              height={9}
+              objectFit="cover"
+            />
             <CardContent sx={{ py: 1 }}>
               <Stack direction="row" justifyContent="space-between">
                 <MotionTypography

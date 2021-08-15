@@ -47,15 +47,16 @@ export const SelectedProduct = ({ product }: Props) => {
         bgcolor: 'background.default',
       }}>
         <Card>
-          <Box sx={{ height: 350, position: 'relative' }}>
-            <Image
-              title={name}
-              alt={name}
-              src={`/photos/${id}/${variant.picture}.jpg`}
-              layout="fill"
-              objectFit="cover"
-            />
-          </Box>
+          <Image
+            title={name}
+            alt={name}
+            src={`/photos/${id}/${variant.picture}.jpg`}
+            layout="responsive"
+            width={16}
+            height={12}
+            objectFit="cover"
+            sizes="500px"
+          />
           <CardContent sx={{ py: 1 }}>
             <Stack direction="row" justifyContent="space-between">
               <MotionTypography
