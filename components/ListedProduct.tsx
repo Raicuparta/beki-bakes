@@ -29,7 +29,6 @@ export const ListedProduct = ({ selected, product: {
   variants,
 } }: Props) => {
   const motionId = selected ? 'NOTHING' : id;
-  const picture = variants[0].picture;
   return (
     <MotionGrid
       key={id}
@@ -48,7 +47,7 @@ export const ListedProduct = ({ selected, product: {
           <CardActionArea component="a">
             <MotionCardMedia
               title={name}
-              image={`/photos/${id}/${picture}.jpg`}
+              image={`/photos/${id}/${id}.jpg`}
               // layoutId={"photo-" + motionId}
               sx={{ height: 230 }}
             />
