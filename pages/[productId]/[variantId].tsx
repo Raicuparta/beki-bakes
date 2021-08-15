@@ -1,8 +1,8 @@
 import React from 'react';
 import Head from 'next/head'
-
 import { useRouter } from 'next/dist/client/router'
-import {  } from '../../components'
+
+import { SocialIcons } from '../../components'
 import {
   SelectedProduct,
   PageHeader,
@@ -28,6 +28,7 @@ const VariantPage = () => {
             product={products[productId]}
             variantId={variantId}
           />
+          <SocialIcons />
         </Box>
       </main>
     </>

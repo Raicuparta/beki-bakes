@@ -48,6 +48,7 @@ const ProductPage = () => {
               />
             ))}
           </Grid>
+          <SocialIcons />
         </Container>
       </main>
     </>
