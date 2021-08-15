@@ -31,7 +31,7 @@ export const products: Record<ProductId, Product> = {
     ],
   },
   macarons: {
-    name: 'Macaroons',
+    name: 'Macarons',
     price: 2.00,
     id: 'macarons',
     variants: {

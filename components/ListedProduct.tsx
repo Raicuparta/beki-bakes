@@ -55,18 +55,12 @@ export const ListedProduct = ({
               objectFit="cover"
             />
             <CardContent sx={{ py: 1 }}>
-              <Stack direction="row" justifyContent="space-between">
-                <MotionTypography
-                  variant="h6"
-                >
-                  {name}
-                </MotionTypography>
-                <MotionTypography
-                  variant="h6"
-                >
-                  €{price}
-                </MotionTypography>
-              </Stack>
+              <MotionTypography
+                variant="h6"
+                textAlign="center"
+              >
+                {name}
+              </MotionTypography>
             </CardContent>
           </CardActionArea>
         </Link>
