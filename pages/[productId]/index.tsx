@@ -35,9 +35,8 @@ const ProductPage = () => {
         <title>bekibakes</title>
       </Head>
       <main>
-        <PageHeader />
-        <SocialIcons />
-        <Container maxWidth="sm">
+        <PageHeader isSmall />
+        <Container maxWidth="sm" sx={{ my: 2 }}>
           <Grid container spacing={2} sx={{ mb: 2 }}>
             {Object.entries(product.variants).map(([variantId, variantName]) => (
               <ListedProduct

@@ -9,6 +9,7 @@ import {
   ProductId,
   products
 } from '../../components';
+import { Box } from '@material-ui/core';
 
 const VariantPage = () => {
   const { query } = useRouter();
@@ -22,10 +23,12 @@ const VariantPage = () => {
       </Head>
       <main>
         <PageHeader isSmall />
-        <SelectedProduct
-          product={products[productId]}
-          variantId={variantId}
-        />
+        <Box my={2}>
+          <SelectedProduct
+            product={products[productId]}
+            variantId={variantId}
+          />
+        </Box>
       </main>
     </>
   );
