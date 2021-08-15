@@ -24,8 +24,33 @@ const theme = createTheme({
   shape: {
     borderRadius: 0,
   },
-  //@ts-ignore
-  shadows: [],
+  shadows: [
+    'none',
+    'none',
+    'none',
+    'none',
+    'none',
+    'none',
+    'none',
+    'none',
+    'none',
+    'none',
+    'none',
+    'none',
+    'none',
+    'none',
+    'none',
+    'none',
+    'none',
+    'none',
+    'none',
+    'none',
+    'none',
+    'none',
+    'none',
+    'none',
+    'none',
+  ],
 });
 
 function MyApp({ Component, pageProps }: AppProps) {
