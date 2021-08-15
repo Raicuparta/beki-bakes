@@ -61,7 +61,7 @@ export const SelectedProduct = ({ product, variantId }: Props) => {
               layoutId={"name-" + id}
               align="center"
             >
-              {name} ({variant})
+              {variant} {name}
             </MotionTypography>
           </CardContent>
           <span />

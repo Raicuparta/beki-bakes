@@ -41,7 +41,7 @@ export const products: Record<ProductId, Product> = {
     ],
   },
   poundCake: {
-    name: 'Pound cake',
+    name: 'Pound Cake',
     price: 3.00,
     id: 'poundCake',
     variants: {
@@ -84,20 +84,20 @@ export const products: Record<ProductId, Product> = {
     price: 1.50,
     id: 'cookies',
     variants: {
-      cookies: 'Cookies',
+      walnut: 'Walnut',
     },
     packages: [
       {
+        quantity: 6,
+        price: 8,
+      },
+      {
         quantity: 12,
-        price: 18,
+        price: 12,
       },
       {
         quantity: 24,
-        price: 35,
-      },
-      {
-        quantity: 48,
-        price: 50,
+        price: 20,
       },
     ],
   },
