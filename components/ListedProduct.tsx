@@ -26,15 +26,17 @@ export const ListedProduct = ({ selected, product: {
   id,
   name,
   price,
+  variants,
 } }: Props) => {
   const motionId = selected ? 'NOTHING' : id;
+  const picture = variants[0].picture;
   return (
     <MotionGrid
       key={id}
       item
       xs={12}
       sm={6}
-      layoutId={"card-" + motionId}
+      // layoutId={"card-" + motionId}
       sx={{ zIndex: selected ? 1 : 0 }}
     >
       <Card>
@@ -46,21 +48,21 @@ export const ListedProduct = ({ selected, product: {
           <CardActionArea component="a">
             <MotionCardMedia
               title={name}
-              image={`/photos/${id}/${id}.jpg`}
-              layoutId={"photo-" + motionId}
+              image={`/photos/${id}/${picture}.jpg`}
+              // layoutId={"photo-" + motionId}
               sx={{ height: 230 }}
             />
             <CardContent sx={{ py: 1 }}>
               <Stack direction="row" justifyContent="space-between">
                 <MotionTypography
                   variant="h6"
-                  layoutId={"name-" + motionId}
+                  // layoutId={"name-" + motionId}
                 >
                   {name}
                 </MotionTypography>
                 <MotionTypography
                   variant="h6"
-                  layoutId={"price-" + motionId}
+                  // layoutId={"price-" + motionId}
                 >
                   €{price}
                 </MotionTypography>

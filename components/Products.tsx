@@ -40,11 +40,11 @@ export const products = {
       },
       {
         name: 'Pistachio',
-        picture: 'macarons',
+        picture: 'pistachio',
       },
       {
         name: 'Yuzu',
-        picture: 'macarons',
+        picture: 'yuzu',
       },
       {
         name: 'Caramel',
