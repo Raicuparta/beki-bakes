@@ -69,8 +69,12 @@ export const products = {
     id: 'poundCake',
     variants: [
       {
-        name: 'Pound cake',
-        picture: 'poundCake',
+        name: 'Leon',
+        picture: 'lemon',
+      },
+      {
+        name: 'Red Velvet',
+        picture: 'redVelvet',
       },
     ],
   },
