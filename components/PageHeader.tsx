@@ -5,7 +5,7 @@ import {
   Box,
   Container,
 } from '@material-ui/core'
-import { ArrowLeft as ArrowLeftIcon } from '@material-ui/icons';
+import { ArrowBackIos as ArrowLeftIcon } from '@material-ui/icons';
 import Link from 'next/link'
 import React from 'react'
 
@@ -34,10 +34,15 @@ export const PageHeader = ({ isSmall = false, href }: Props) => {
               pt: isSmall ? 1 : 2,
               pb: 1,
               alignItems: 'center',
+              justifyContent: 'center',
+              position: 'relative',
             }}
-          >
+            >
             {isSmall && (
-              <ArrowLeftIcon />
+              <ArrowLeftIcon
+                fontSize="small" 
+                sx={{ position: 'absolute', left: 0 }}
+              />
             )}
             <img
               src="/snail-halfwhite.svg"
