@@ -33,7 +33,7 @@ export const SelectedProduct = ({ product }: Props) => {
     return null;
   }
 
-  const { id, name, price, variants } = product;
+  const { id, name, price, variants, packages } = product;
   const variant = variants[selectedVariant];
 
   return (
@@ -75,27 +75,23 @@ export const SelectedProduct = ({ product }: Props) => {
           </CardContent>
           <span />
         </Card>
-        <Container sx={{ my: 2 }}>
-          <ButtonGroup variant="contained" size="small">
-            <Button disabled={quantity <= 1} onClick={() => {
-              setQuantity(quantity => quantity > 1 ? quantity - 1 : quantity)
-            }}>
-              <RemoveIcon fontSize="small" />
-            </Button>
-            <Button
-              variant="outlined"
-              size="medium"
-              sx={{ pointerEvents: 'none', width: '20px' }}
-            >
-              {quantity}
-            </Button>
-            <Button onClick={() => {
-              setQuantity(quantity => quantity + 1)
-            }}>
-              <AddIcon fontSize="small"  />
-            </Button>
-          </ButtonGroup>
-        </Container>
+        <Box sx={{ display: 'flex', m: 2 }}>
+          <Stack
+            direction="row"
+            spacing={2}
+            sx={{ width: '100%' }}
+          >
+            {packages.map(pkg => (
+              <Button
+                key={pkg.quantity}
+                variant="contained"
+                fullWidth
+              >
+                {pkg.quantity} (€{pkg.price})
+              </Button>
+            ))}
+          </Stack>
+        </Box>
         <Box>
           <List sx={{ py: 0 }}>
             {product.variants.map((variant, index) => (

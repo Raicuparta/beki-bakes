@@ -24,6 +24,12 @@ export const products = {
         picture: 'rollCake',
       },
     ],
+    packages: [
+      {
+        quantity: 1,
+        price: 10,
+      },
+    ],
   },
   macarons: {
     name: 'Macaroons',
@@ -51,6 +57,20 @@ export const products = {
         picture: 'macarons',
       },
     ],
+    packages: [
+      {
+        quantity: 12,
+        price: 18,
+      },
+      {
+        quantity: 24,
+        price: 35,
+      },
+      {
+        quantity: 48,
+        price: 50,
+      },
+    ],
   },
   cookies: {
     name: 'Cookies',
@@ -60,6 +80,20 @@ export const products = {
       {
         name: 'Cookies',
         picture: 'cookies',
+      },
+    ],
+    packages: [
+      {
+        quantity: 12,
+        price: 18,
+      },
+      {
+        quantity: 24,
+        price: 35,
+      },
+      {
+        quantity: 48,
+        price: 50,
       },
     ],
   },
@@ -75,6 +109,20 @@ export const products = {
       {
         name: 'Red Velvet',
         picture: 'redVelvet',
+      },
+    ],
+    packages: [
+      {
+        quantity: 12,
+        price: 18,
+      },
+      {
+        quantity: 24,
+        price: 35,
+      },
+      {
+        quantity: 48,
+        price: 50,
       },
     ],
   },

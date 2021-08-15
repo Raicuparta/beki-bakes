@@ -1,7 +1,20 @@
 // import '../styles/globals.css'
 import type { AppProps } from 'next/app'
-import { Box, createTheme, CssBaseline, GlobalStyles, ThemeProvider } from '@material-ui/core';
+import { Box, createTheme, CssBaseline, GlobalStyles, PaletteOptions, ThemeProvider } from '@material-ui/core';
 import { AnimateSharedLayout } from 'framer-motion';
+
+const palette = {
+  background: {
+    paper: '#002555',
+  },
+  text: {
+    primary: '#ffffff',
+    secondary: '#002555',
+  },
+  primary: {
+    main: '#002555',
+  },
+};
 
 const theme = createTheme({
   typography: {
@@ -9,18 +22,7 @@ const theme = createTheme({
       '"Bona Nova"',
     ].join(','),
   },
-  palette: {
-    background: {
-      paper: '#002555',
-    },
-    text: {
-      primary: '#ffffff',
-      secondary: '#002555',
-    },
-    primary: {
-      main: '#002555',
-    }
-  },
+  palette,
   shape: {
     borderRadius: 0,
   },
@@ -51,6 +53,22 @@ const theme = createTheme({
     'none',
     'none',
   ],
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        contained: {
+          border: '2px solid',
+          background: 'white',
+          borderColor: palette.primary.main,
+          color: palette.primary.main,
+          ":hover": {
+            background: palette.background.paper,
+            color: 'white',
+          }
+        }
+      }
+    }
+  }
 });
 
 function MyApp({ Component, pageProps }: AppProps) {
