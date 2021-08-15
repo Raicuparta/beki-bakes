@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import {
   Card,
   CardContent,
@@ -46,13 +47,15 @@ export const SelectedProduct = ({ product }: Props) => {
         bgcolor: 'background.default',
       }}>
         <Card>
-          <MotionCardMedia
-            title={name}
-            image={`/photos/${id}/${variant.picture}.jpg`}
-            layoutId={"photo-" + id}
-            sx={{ height: 350 }}
-          >
-          </MotionCardMedia>
+          <Box sx={{ height: 350, position: 'relative' }}>
+            <Image
+              title={name}
+              alt={name}
+              src={`/photos/${id}/${variant.picture}.jpg`}
+              layout="fill"
+              objectFit="cover"
+            />
+          </Box>
           <CardContent sx={{ py: 1 }}>
             <Stack direction="row" justifyContent="space-between">
               <MotionTypography

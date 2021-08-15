@@ -6,7 +6,9 @@ import {
   Typography,
   Stack,
   Grid,
+  Box,
 } from '@material-ui/core';
+import Image from 'next/image';
 import { AnimatePresence, motion } from "framer-motion";
 import Link from 'next/link';
 import {
@@ -45,12 +47,15 @@ export const ListedProduct = ({ selected, product: {
           scroll={false}
         >
           <CardActionArea component="a">
-            <MotionCardMedia
-              title={name}
-              image={`/photos/${id}/${id}.jpg`}
-              // layoutId={"photo-" + motionId}
-              sx={{ height: 230 }}
-            />
+            <Box sx={{ height: 230, position: 'relative' }}>
+              <Image
+                title={name}
+                alt={name}
+                src={`/photos/${id}/${id}.jpg`}
+                layout="fill"
+                objectFit="cover"
+              />
+            </Box>
             <CardContent sx={{ py: 1 }}>
               <Stack direction="row" justifyContent="space-between">
                 <MotionTypography
