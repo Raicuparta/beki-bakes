@@ -30,7 +30,6 @@ export const ListedProduct = ({
   href,
   name,
   image,
-  price,
 }: Props) => {
   return (
     <MotionGrid
@@ -53,6 +52,8 @@ export const ListedProduct = ({
               width={16}
               height={9}
               objectFit="cover"
+              placeholder="blur"
+              blurDataURL="/photos/placeholder.png"
             />
             <CardContent sx={{ py: 1 }}>
               <MotionTypography
