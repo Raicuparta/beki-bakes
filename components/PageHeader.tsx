@@ -11,12 +11,13 @@ import React from 'react'
 
 type Props = {
   isSmall?: boolean;
+  href: string;
 };
 
-export const PageHeader = ({ isSmall = false }: Props) => {
+export const PageHeader = ({ isSmall = false, href }: Props) => {
   const size = isSmall ? 40 : 75;
   return (
-    <Link href="/" passHref>
+    <Link href={href} passHref>
       <Box
         component="a"
         sx={{

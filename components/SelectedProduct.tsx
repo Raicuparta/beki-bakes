@@ -39,7 +39,6 @@ export const SelectedProduct = ({ product, variantId }: Props) => {
   return (
     <MotionContainer
       maxWidth="sm"
-      disableGutters
       layoutId={"card-" + id}
     >
       <Box>

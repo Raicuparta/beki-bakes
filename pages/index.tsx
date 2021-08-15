@@ -24,7 +24,7 @@ const Home = () => {
         <title>bekibakes</title>
       </Head>
       <main>
-        <PageHeader />
+        <PageHeader href="/" />
         <SocialIcons />
         <Container maxWidth="sm">
           <Grid container spacing={2} sx={{ mb: 2 }}>

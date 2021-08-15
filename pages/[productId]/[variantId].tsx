@@ -22,7 +22,7 @@ const VariantPage = () => {
         <title>bekibakes</title>
       </Head>
       <main>
-        <PageHeader isSmall />
+        <PageHeader isSmall href={`/${productId}`} />
         <Box my={2}>
           <SelectedProduct
             product={products[productId]}
