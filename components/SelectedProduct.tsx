@@ -19,7 +19,7 @@ import {
   MotionContainer,
 } from './Motion';
 
-import { Product } from "./Products";
+import { Product } from "./products";
 
 type Props = {
   product: Product;
@@ -50,7 +50,7 @@ export const SelectedProduct = ({ product }: Props) => {
           <Image
             title={name}
             alt={name}
-            src={`/photos/${id}/${variant.picture}.jpg`}
+            src={`/photos/${id}/${id}.jpg`}
             layout="responsive"
             width={16}
             height={12}
@@ -63,7 +63,7 @@ export const SelectedProduct = ({ product }: Props) => {
                 variant="h6"
                 layoutId={"name-" + id}
               >
-                {name} ({variant.name})
+                {name} ({variant})
               </MotionTypography>
               <MotionTypography
                 variant="h6"
