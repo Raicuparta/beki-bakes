@@ -64,7 +64,6 @@ function MyApp({ Component, pageProps }: AppProps) {
           width: '200vw',
           height: '200vh',
           zIndex: -1,
-          // @ts-ignore
           backgroundImage: 'url(/transparent-snail.png)',
           backgroundSize: '100px',
           transform: 'rotate(45deg)',
