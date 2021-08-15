@@ -14,22 +14,6 @@ export type Product = {
 export type ProductId = 'rollCake' | 'macarons' | 'cookies' | 'poundCake';
 
 export const products: Record<ProductId, Product> = {
-  rollCake: {
-    name: 'Roll cake',
-    price: 10.00,
-    id: 'rollCake',
-    variants: {
-      chestnut: 'Chestnut Mousse',
-      caramel: 'Salted Caramel',
-      matcha: 'Matcha Adzuki',
-    },
-    packages: [
-      {
-        quantity: 1,
-        price: 10,
-      },
-    ],
-  },
   macarons: {
     name: 'Macarons',
     price: 2.00,
@@ -56,12 +40,13 @@ export const products: Record<ProductId, Product> = {
       },
     ],
   },
-  cookies: {
-    name: 'Cookies',
-    price: 1.50,
-    id: 'cookies',
+  poundCake: {
+    name: 'Pound cake',
+    price: 3.00,
+    id: 'poundCake',
     variants: {
-      cookies: 'Cookies',
+      lemon: 'Lemon',
+      redVelvet: 'Red Velvet',
     },
     packages: [
       {
@@ -78,13 +63,28 @@ export const products: Record<ProductId, Product> = {
       },
     ],
   },
-  poundCake: {
-    name: 'Pound cake',
-    price: 3.00,
-    id: 'poundCake',
+  rollCake: {
+    name: 'Roll cake',
+    price: 10.00,
+    id: 'rollCake',
     variants: {
-      lemon: 'Lemon',
-      redVelvet: 'Red Velvet',
+      chestnut: 'Chestnut Mousse',
+      caramel: 'Salted Caramel',
+      matcha: 'Matcha Adzuki',
+    },
+    packages: [
+      {
+        quantity: 1,
+        price: 10,
+      },
+    ],
+  },
+  cookies: {
+    name: 'Cookies',
+    price: 1.50,
+    id: 'cookies',
+    variants: {
+      cookies: 'Cookies',
     },
     packages: [
       {

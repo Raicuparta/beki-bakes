@@ -56,14 +56,13 @@ export const SelectedProduct = ({ product, variantId }: Props) => {
             blurDataURL="/photos/placeholder.png"
           />
           <CardContent sx={{ py: 1 }}>
-            <Stack direction="row" justifyContent="space-between">
-              <MotionTypography
-                variant="h6"
-                layoutId={"name-" + id}
-              >
-                {name} ({variant})
-              </MotionTypography>
-            </Stack>
+            <MotionTypography
+              variant="h6"
+              layoutId={"name-" + id}
+              align="center"
+            >
+              {name} ({variant})
+            </MotionTypography>
           </CardContent>
           <span />
         </Card>
@@ -78,8 +77,21 @@ export const SelectedProduct = ({ product, variantId }: Props) => {
                 key={pkg.quantity}
                 variant="contained"
                 fullWidth
+                sx={{
+                  fontFamily: 'serif',
+                  fontSize: '1em',
+                  lineHeight: '1em',
+                  textTransform: 'none',
+                }}
               >
-                {pkg.quantity} (€{pkg.price})
+                <Stack spacing={1}>
+                  <Box fontWeight="bold">
+                    {pkg.quantity} pcs
+                  </Box>
+                  <Box>
+                    €{pkg.price}
+                  </Box>
+                </Stack>
               </Button>
             ))}
           </Stack>

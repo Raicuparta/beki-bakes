@@ -20,6 +20,9 @@ const theme = createTheme({
   typography: {
     fontFamily: [
       '"Bona Nova"',
+      '"Times New Roman"',
+      'Times',
+      'serif'
     ].join(','),
   },
   palette,
