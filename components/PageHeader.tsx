@@ -30,8 +30,8 @@ export const PageHeader = ({ isSmall = false }: Props) => {
           <Stack
             direction={ isSmall ? 'row' : 'column' }
             sx={{
-              pt: isSmall ? 1 : 3,
-              pb: isSmall ? 0 : 1,
+              pt: isSmall ? 1 : 2,
+              pb: 1,
               alignItems: 'center',
             }}
           >
