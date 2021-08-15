@@ -17,40 +17,38 @@ import {
   MotionGrid,
 } from './Motion';
 
-import { Product } from "./Products";
+import { Product } from "./products";
 
 type Props = {
-  product: Product;
-  selected?: boolean;
+  href: string;
+  name: string;
+  image: string;
+  price: number;
 };
 
-export const ListedProduct = ({ selected, product: {
-  id,
+export const ListedProduct = ({
+  href,
   name,
+  image,
   price,
-  variants,
-} }: Props) => {
-  const motionId = selected ? 'NOTHING' : id;
+}: Props) => {
   return (
     <MotionGrid
-      key={id}
+      key={href}
       item
       xs={12}
       sm={6}
-      // layoutId={"card-" + motionId}
-      sx={{ zIndex: selected ? 1 : 0 }}
     >
       <Card>
         <Link
-          href={`/${id}`}
+          href={href}
           passHref
-          scroll={false}
         >
           <CardActionArea component="a">
             <Image
               title={name}
               alt={name}
-              src={`/photos/${id}/${id}.jpg`}
+              src={image}
               layout="responsive"
               width={16}
               height={9}
@@ -60,13 +58,11 @@ export const ListedProduct = ({ selected, product: {
               <Stack direction="row" justifyContent="space-between">
                 <MotionTypography
                   variant="h6"
-                  // layoutId={"name-" + motionId}
                 >
                   {name}
                 </MotionTypography>
                 <MotionTypography
                   variant="h6"
-                  // layoutId={"price-" + motionId}
                 >
                   €{price}
                 </MotionTypography>

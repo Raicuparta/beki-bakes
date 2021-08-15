@@ -3,12 +3,17 @@ import React, { useEffect } from 'react';
 import { Container, Grid } from '@material-ui/core';
 import { useRouter } from 'next/dist/client/router';
 
-import { PageHeader, products, SocialIcons } from '../components';
-import { ListedProduct } from '../components/ListedProduct';
+import {
+  PageHeader,
+  ProductId,
+  products,
+  SocialIcons,
+} from '../../components';
+import { ListedProduct } from '../../components/ListedProduct';
+import { CountertopsOutlined } from '@material-ui/icons';
 
-const Home = () => {
-  const { beforePopState } = useRouter();
-
+const ProductPage = () => {
+  const { beforePopState, query } = useRouter();
   useEffect(() => {
     beforePopState(state => {
       // Disable scroll restoration on navigation,
@@ -17,6 +22,12 @@ const Home = () => {
       return true;
     });
   }, [beforePopState]);
+
+  const productId = query.productId as ProductId;
+  if (!productId) return null;
+
+  const product = products[productId];
+  if (!product) return null;
   
   return (
     <>
@@ -28,15 +39,12 @@ const Home = () => {
         <SocialIcons />
         <Container maxWidth="sm">
           <Grid container spacing={2} sx={{ mb: 2 }}>
-            {Object.values(products).map(({
-              id,
-              name,
-            }) => (
+            {Object.entries(product.variants).map(([variantId, variantName]) => (
               <ListedProduct
-                key={id}
-                href={`/${id}`}
-                name={name}
-                image={`/photos/${id}/${id}.jpg`}
+                key={variantId}
+                href={`/${product.id}/${variantId}`}
+                image={`/photos/${product.id}/${variantId}.jpg`}
+                name={variantName}
                 price={0}
               />
             ))}
@@ -47,4 +55,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default ProductPage;
