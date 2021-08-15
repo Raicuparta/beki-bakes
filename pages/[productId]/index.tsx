@@ -37,7 +37,7 @@ const ProductPage = () => {
       <main>
         <PageHeader isSmall href="/" />
         <Container maxWidth="sm" sx={{ my: 2 }}>
-          <Grid container spacing={2} sx={{ mb: 2 }}>
+          <Grid container spacing={2} sx={{ mb: 2 }} justifyContent="center">
             {Object.entries(product.variants).map(([variantId, variantName]) => (
               <ListedProduct
                 key={variantId}
