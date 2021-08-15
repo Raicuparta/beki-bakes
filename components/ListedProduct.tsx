@@ -54,6 +54,7 @@ export const ListedProduct = ({
               objectFit="cover"
               placeholder="blur"
               blurDataURL="/photos/placeholder.png"
+              sizes="400px"
             />
             <CardContent sx={{ py: 1 }}>
               <MotionTypography
