@@ -46,12 +46,14 @@ export const SelectedProduct = ({ product, variantId }: Props) => {
           <Image
             title={name}
             alt={name}
-            src={`/photos/${id}/${id}.jpg`}
+            src={`/photos/${id}/${variantId}.jpg`}
             layout="responsive"
             width={16}
             height={12}
             objectFit="cover"
             sizes="500px"
+            placeholder="blur"
+            blurDataURL="/photos/placeholder.png"
           />
           <CardContent sx={{ py: 1 }}>
             <Stack direction="row" justifyContent="space-between">
