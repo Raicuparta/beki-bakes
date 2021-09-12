@@ -9,21 +9,21 @@ export type Product = {
   id: string;
   variants: Record<string, string>;
   packages: Package[];
-}
+};
 
-export type ProductId = 'rollCake' | 'macarons' | 'cookies' | 'poundCake';
+export type ProductId = "rollCake" | "macarons" | "cookies" | "poundCake";
 
 export const products: Record<ProductId, Product> = {
   macarons: {
-    name: 'Macarons',
-    price: 2.00,
-    id: 'macarons',
+    name: "Macarons",
+    price: 2.0,
+    id: "macarons",
     variants: {
-      raspberry: 'Raspberry',
-      chocolate: 'Chocolate',
-      pistachio: 'Pistachio',
-      yuzu: 'Yuzu',
-      macarons: 'Caramel',
+      raspberry: "Raspberry",
+      chocolate: "Chocolate",
+      pistachio: "Pistachio",
+      yuzu: "Yuzu",
+      macarons: "Caramel",
     },
     packages: [
       {
@@ -41,12 +41,13 @@ export const products: Record<ProductId, Product> = {
     ],
   },
   poundCake: {
-    name: 'Pound Cake',
-    price: 3.00,
-    id: 'poundCake',
+    name: "Pound Cake",
+    price: 3.0,
+    id: "poundCake",
     variants: {
-      lemon: 'Lemon',
-      redVelvet: 'Red Velvet',
+      lemon: "Lemon",
+      redVelvet: "Red Velvet",
+      matcha: "Matcha",
     },
     packages: [
       {
@@ -64,13 +65,13 @@ export const products: Record<ProductId, Product> = {
     ],
   },
   rollCake: {
-    name: 'Roll cake',
-    price: 10.00,
-    id: 'rollCake',
+    name: "Roll cake",
+    price: 10.0,
+    id: "rollCake",
     variants: {
-      chestnut: 'Chestnut Mousse',
-      caramel: 'Salted Caramel',
-      matcha: 'Matcha Adzuki',
+      chestnut: "Chestnut Mousse",
+      caramel: "Salted Caramel",
+      matcha: "Matcha Adzuki",
     },
     packages: [
       {
@@ -80,11 +81,11 @@ export const products: Record<ProductId, Product> = {
     ],
   },
   cookies: {
-    name: 'Cookies',
-    price: 1.50,
-    id: 'cookies',
+    name: "Cookies",
+    price: 1.5,
+    id: "cookies",
     variants: {
-      walnut: 'Walnut',
+      walnut: "Walnut",
     },
     packages: [
       {
