@@ -1,15 +1,14 @@
-import {
-  Stack,
-  IconButton,
-} from '@material-ui/core'
-import React from 'react'
+import { Stack, IconButton } from "@material-ui/core";
+import React from "react";
 import {
   Instagram as InstagramIcon,
   Facebook as FacebookIcon,
-} from '@material-ui/icons'
+} from "@material-ui/icons";
+import { MotionStack } from "./Motion";
+import { AnimatePresence } from "framer-motion";
 
 export const SocialIcons = () => (
-  <Stack
+  <MotionStack
     spacing={4}
     direction="row"
     justifyContent="center"
@@ -35,5 +34,5 @@ export const SocialIcons = () => (
     >
       <FacebookIcon fontSize="large" />
     </IconButton>
-  </Stack>
+  </MotionStack>
 );

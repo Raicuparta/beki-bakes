@@ -11,6 +11,7 @@ import {
 } from "../../components";
 import { Box } from "@material-ui/core";
 import { GetStaticPaths } from "next";
+import { PageContainer } from "../../components/PageContainer";
 
 const VariantPage = () => {
   const { query } = useRouter();
@@ -24,32 +25,32 @@ const VariantPage = () => {
       </Head>
       <main>
         <PageHeader isSmall href={`/${productId}`} />
-        <Box my={2}>
+        <PageContainer>
           <SelectedProduct
             product={products[productId]}
             variantId={variantId}
           />
-          <SocialIcons />
-        </Box>
+        </PageContainer>
+        <SocialIcons />
       </main>
     </>
   );
 };
 
-export const getStaticProps = async () => ({ props: {} });
+// export const getStaticProps = async () => ({ props: {} });
 
-export const getStaticPaths: GetStaticPaths = async () => ({
-  paths: Object.values(products)
-    .map(({ id: productId, variants }) =>
-      Object.keys(variants).map((variantId) => ({
-        params: {
-          productId,
-          variantId,
-        },
-      }))
-    )
-    .flat(),
-  fallback: false,
-});
+// export const getStaticPaths: GetStaticPaths = async () => ({
+//   paths: Object.values(products)
+//     .map(({ id: productId, variants }) =>
+//       Object.keys(variants).map((variantId) => ({
+//         params: {
+//           productId,
+//           variantId,
+//         },
+//       }))
+//     )
+//     .flat(),
+//   fallback: false,
+// });
 
 export default VariantPage;

@@ -6,6 +6,7 @@ import { useRouter } from "next/dist/client/router";
 import { PageHeader, ProductId, products, SocialIcons } from "../../components";
 import { ListedProduct } from "../../components/ListedProduct";
 import { GetStaticPaths } from "next";
+import { PageContainer } from "../../components/PageContainer";
 
 const ProductPage = () => {
   const { beforePopState, query } = useRouter();
@@ -31,7 +32,7 @@ const ProductPage = () => {
       </Head>
       <main>
         <PageHeader isSmall href="/" />
-        <Container maxWidth="sm" sx={{ my: 2 }}>
+        <PageContainer>
           <Grid container spacing={2} sx={{ mb: 2 }} justifyContent="center">
             {Object.entries(product.variants).map(
               ([variantId, variantName]) => (
@@ -45,18 +46,18 @@ const ProductPage = () => {
               )
             )}
           </Grid>
-          <SocialIcons />
-        </Container>
+        </PageContainer>
+        <SocialIcons />
       </main>
     </>
   );
 };
 
-export const getStaticProps = async () => ({ props: {} });
+// export const getStaticProps = async () => ({ props: {} });
 
-export const getStaticPaths: GetStaticPaths = async () => ({
-  paths: Object.keys(products).map((productId) => ({ params: { productId } })),
-  fallback: false,
-});
+// export const getStaticPaths: GetStaticPaths = async () => ({
+//   paths: Object.keys(products).map((productId) => ({ params: { productId } })),
+//   fallback: false,
+// });
 
 export default ProductPage;
