@@ -45,7 +45,6 @@ export const SelectedProduct = ({ product, variantId }: Props) => {
             height={12}
             objectFit="cover"
             sizes="500px"
-            blurDataURL="/photos/placeholder.png"
             priority
           />
           <CardContent sx={{ py: 1 }}>

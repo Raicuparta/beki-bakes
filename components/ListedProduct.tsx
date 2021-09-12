@@ -36,8 +36,7 @@ export const ListedProduct = ({ href, name, image }: Props) => {
               width={16}
               height={9}
               objectFit="cover"
-              blurDataURL="/photos/placeholder.png"
-              sizes="400px"
+              sizes="200px"
               priority
             />
             <CardContent sx={{ py: 1 }}>
