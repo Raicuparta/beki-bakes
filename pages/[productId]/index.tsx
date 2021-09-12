@@ -31,7 +31,7 @@ const ProductPage = () => {
         <title>bekibakes</title>
       </Head>
       <main>
-        <PageHeader isSmall href="/" />
+        <PageHeader forceSmall href="/" />
         <PageContainer>
           <Grid container spacing={2} sx={{ mb: 2 }} justifyContent="center">
             {Object.entries(product.variants).map(

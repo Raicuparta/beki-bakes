@@ -3,18 +3,35 @@ import { Typography, Stack, Box, Container } from "@material-ui/core";
 import { ArrowBackIos as ArrowLeftIcon } from "@material-ui/icons";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { MotionBox, MotionTypography } from "./Motion";
 
 type Props = {
-  isSmall?: boolean;
+  forceSmall?: boolean;
   href: string;
 };
 
-export const PageHeader = ({ isSmall = false, href }: Props) => {
+export const PageHeader = ({ forceSmall = false, href }: Props) => {
+  const [isSmall, setIsSmall] = useState(false);
+
   const size = isSmall ? 40 : 75;
+
+  useEffect(() => {
+    if (forceSmall) {
+      setIsSmall(forceSmall);
+      return;
+    }
+    const onScroll = () => {
+      setIsSmall(window.scrollY > 80);
+    };
+    window.addEventListener("scroll", onScroll);
+
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [forceSmall]);
+
   return (
     <>
+      {!forceSmall && <Box height={140} />}
       <MotionBox
         component="a"
         sx={{
@@ -23,7 +40,7 @@ export const PageHeader = ({ isSmall = false, href }: Props) => {
           backgroundColor: "background.paper",
           display: "block",
           mb: 2,
-          position: "sticky",
+          position: forceSmall ? "sticky" : "fixed",
           width: "100%",
           top: 0,
           zIndex: 1,

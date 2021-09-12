@@ -24,7 +24,7 @@ const VariantPage = () => {
         <title>bekibakes</title>
       </Head>
       <main>
-        <PageHeader isSmall href={`/${productId}`} />
+        <PageHeader forceSmall href={`/${productId}`} />
         <PageContainer>
           <SelectedProduct
             product={products[productId]}
