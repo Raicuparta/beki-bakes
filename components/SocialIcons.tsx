@@ -13,7 +13,6 @@ export const SocialIcons = () => (
     direction="row"
     justifyContent="center"
     sx={{ my: 2 }}
-    layoutId="socialIcons"
   >
     <IconButton
       component="a"

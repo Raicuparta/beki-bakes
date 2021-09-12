@@ -35,7 +35,7 @@ export const SelectedProduct = ({ product, variantId }: Props) => {
           priority
         />
         <CardContent sx={{ py: 1 }}>
-          <MotionTypography variant="h6" layoutId={"name-" + id} align="center">
+          <MotionTypography variant="h6" align="center">
             {variant} {name}
           </MotionTypography>
         </CardContent>
