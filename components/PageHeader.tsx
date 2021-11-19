@@ -1,10 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import { Typography, Stack, Box, Container } from "@material-ui/core";
 import { ArrowBackIos as ArrowLeftIcon } from "@material-ui/icons";
-import { motion } from "framer-motion";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { MotionBox, MotionTypography } from "./Motion";
 
 type Props = {
   forceSmall?: boolean;
@@ -32,7 +30,7 @@ export const PageHeader = ({ forceSmall = false, href }: Props) => {
   return (
     <>
       {!forceSmall && <Box height={140} />}
-      <MotionBox
+      <Box
         component="a"
         sx={{
           all: "unset",
@@ -45,7 +43,6 @@ export const PageHeader = ({ forceSmall = false, href }: Props) => {
           top: 0,
           zIndex: 1,
         }}
-        layoutId="pageHeader"
       >
         <Link href={href} passHref>
           <Container maxWidth="sm">
@@ -65,15 +62,13 @@ export const PageHeader = ({ forceSmall = false, href }: Props) => {
                   sx={{ position: "absolute", left: 0 }}
                 />
               )}
-              <motion.img
+              <img
                 src="/snail-halfwhite.svg"
                 alt="beki bakes"
                 width={size}
                 height={size}
-                layoutId="pageHeaderIcon"
               />
-              <MotionTypography
-                // @ts-ignore
+              <Typography
                 component="h1"
                 align="center"
                 sx={{
@@ -81,14 +76,13 @@ export const PageHeader = ({ forceSmall = false, href }: Props) => {
                   fontSize: isSmall ? 25 : 30,
                   ml: isSmall ? 1 : 0,
                 }}
-                layoutId="pageHeaderTitle"
               >
                 bekibakes
-              </MotionTypography>
+              </Typography>
             </Stack>
           </Container>
         </Link>
-      </MotionBox>
+      </Box>
     </>
   );
 };

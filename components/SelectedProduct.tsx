@@ -1,7 +1,13 @@
 import Image from "next/image";
-import { Card, CardContent, Stack, Box, Button } from "@material-ui/core";
+import {
+  Card,
+  CardContent,
+  Stack,
+  Box,
+  Button,
+  Typography,
+} from "@material-ui/core";
 import React, { useState } from "react";
-import { MotionTypography } from "./Motion";
 
 import { Product } from "./products";
 
@@ -35,9 +41,9 @@ export const SelectedProduct = ({ product, variantId }: Props) => {
           priority
         />
         <CardContent sx={{ py: 1 }}>
-          <MotionTypography variant="h6" align="center">
+          <Typography variant="h6" align="center">
             {variant} {name}
-          </MotionTypography>
+          </Typography>
         </CardContent>
         <span />
       </Card>

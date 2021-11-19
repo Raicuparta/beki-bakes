@@ -2,18 +2,11 @@ import {
   Card,
   CardActionArea,
   CardContent,
-  CardMedia,
   Typography,
-  Stack,
   Grid,
-  Box,
 } from "@material-ui/core";
 import Image from "next/image";
-import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
-import { MotionCardMedia, MotionTypography, MotionGrid } from "./Motion";
-
-import { Product } from "./products";
 
 type Props = {
   href: string;
@@ -24,7 +17,7 @@ type Props = {
 
 export const ListedProduct = ({ href, name, image }: Props) => {
   return (
-    <MotionGrid key={href} item xs={12} sm={6}>
+    <Grid item xs={12} sm={6}>
       <Card>
         <Link href={href} passHref>
           <CardActionArea component="a">
@@ -40,13 +33,13 @@ export const ListedProduct = ({ href, name, image }: Props) => {
               priority
             />
             <CardContent sx={{ py: 1 }}>
-              <MotionTypography variant="h6" textAlign="center">
+              <Typography variant="h6" textAlign="center">
                 {name}
-              </MotionTypography>
+              </Typography>
             </CardContent>
           </CardActionArea>
         </Link>
       </Card>
-    </MotionGrid>
+    </Grid>
   );
 };

@@ -4,16 +4,9 @@ import {
   Instagram as InstagramIcon,
   Facebook as FacebookIcon,
 } from "@material-ui/icons";
-import { MotionStack } from "./Motion";
-import { AnimatePresence } from "framer-motion";
 
 export const SocialIcons = () => (
-  <MotionStack
-    spacing={4}
-    direction="row"
-    justifyContent="center"
-    sx={{ my: 2 }}
-  >
+  <Stack spacing={4} direction="row" justifyContent="center" sx={{ my: 2 }}>
     <IconButton
       component="a"
       href="https://www.instagram.com/bekibakes"
@@ -34,5 +27,5 @@ export const SocialIcons = () => (
     >
       <FacebookIcon fontSize="large" />
     </IconButton>
-  </MotionStack>
+  </Stack>
 );

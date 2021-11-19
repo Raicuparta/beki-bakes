@@ -1,12 +1,11 @@
 import Head from "next/head";
 import React, { useEffect } from "react";
-import { Container, Grid } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import { useRouter } from "next/dist/client/router";
 
 import { PageHeader, products, SocialIcons } from "../components";
 import { ListedProduct } from "../components/ListedProduct";
 import { PageContainer } from "../components/PageContainer";
-import { AnimatePresence } from "framer-motion";
 
 const Home = () => {
   const { beforePopState } = useRouter();
