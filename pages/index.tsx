@@ -6,6 +6,7 @@ import { useRouter } from "next/dist/client/router";
 import { PageHeader, products, SocialIcons } from "../components";
 import { ListedProduct } from "../components/ListedProduct";
 import { PageContainer } from "../components/PageContainer";
+import { productPhotos } from "../components/productPhotos";
 
 const Home = () => {
   const { beforePopState } = useRouter();
@@ -34,7 +35,7 @@ const Home = () => {
                 key={id}
                 href={`/${id}`}
                 name={name}
-                image={`/photos/${id}/${id}.jpg`}
+                image={productPhotos[id]["main"]}
                 price={0}
               />
             ))}
