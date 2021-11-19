@@ -2,9 +2,9 @@ import React from "react";
 import Head from "next/head";
 import { useRouter } from "next/dist/client/router";
 
-import { SocialIcons } from "../../components";
+import { Product, SocialIcons } from "../../components";
 import { SelectedProduct, PageHeader, products } from "../../components";
-import { Box } from "@material-ui/core";
+import { Box, Breadcrumbs, Link, Typography } from "@material-ui/core";
 import { GetStaticPaths } from "next";
 import { PageContainer } from "../../components/PageContainer";
 import { ProductId, ProductVariantId } from "../../components/productPhotos";
@@ -13,6 +13,9 @@ const VariantPage = <TProductId extends ProductId>() => {
   const { query } = useRouter();
   const productId = query.productId as TProductId;
   const variantId = query.variantId as ProductVariantId<TProductId>;
+  const product = products[productId] as Product<TProductId>;
+
+  if (!product) return null;
 
   return (
     <>
@@ -22,12 +25,22 @@ const VariantPage = <TProductId extends ProductId>() => {
       <main>
         <PageHeader forceSmall href={`/${productId}`} />
         <PageContainer>
-          <SelectedProduct
-            // TODO TS problem
-            // @ts-ignore
-            product={products[productId]}
-            variantId={variantId}
-          />
+          <Breadcrumbs aria-label="breadcrumb" sx={{ mb: 2 }}>
+            <Link underline="hover" href="/" sx={{ color: "inherit" }}>
+              Home
+            </Link>
+            <Link
+              underline="hover"
+              href={`/${productId}`}
+              sx={{ color: "inherit" }}
+            >
+              {product.name}
+            </Link>
+            <Typography color="background.paper">
+              {product.variants[variantId]}
+            </Typography>
+          </Breadcrumbs>
+          <SelectedProduct product={product} variantId={variantId} />
         </PageContainer>
         <SocialIcons />
       </main>

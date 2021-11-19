@@ -1,6 +1,12 @@
 import Head from "next/head";
 import React, { useEffect } from "react";
-import { Container, Grid } from "@material-ui/core";
+import {
+  Breadcrumbs,
+  Container,
+  Grid,
+  Link,
+  Typography,
+} from "@material-ui/core";
 import { useRouter } from "next/dist/client/router";
 
 import { PageHeader, products, SocialIcons } from "../../components";
@@ -34,6 +40,12 @@ const ProductPage = () => {
       <main>
         <PageHeader forceSmall href="/" />
         <PageContainer>
+          <Breadcrumbs aria-label="breadcrumb" sx={{ mb: 2 }}>
+            <Link underline="hover" href="/" sx={{ color: "inherit" }}>
+              Home
+            </Link>
+            <Typography color="background.paper">{product.name}</Typography>
+          </Breadcrumbs>
           <Grid container spacing={2} sx={{ mb: 2 }} justifyContent="center">
             {Object.entries(product.variants).map(
               ([variantId, variantName]) => (
