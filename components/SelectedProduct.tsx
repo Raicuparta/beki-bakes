@@ -10,13 +10,17 @@ import {
 import React, { useState } from "react";
 
 import { Product } from "./products";
+import { ProductId, ProductVariantId } from "./productPhotos";
 
-type Props = {
-  product: Product;
-  variantId: string;
+type Props<TProductId extends ProductId> = {
+  product: Product<TProductId>;
+  variantId: ProductVariantId<TProductId>;
 };
 
-export const SelectedProduct = ({ product, variantId }: Props) => {
+export const SelectedProduct = <TProductId extends ProductId>({
+  product,
+  variantId,
+}: Props<TProductId>) => {
   const [quantity, setQuantity] = useState(1);
 
   if (!product) return null;

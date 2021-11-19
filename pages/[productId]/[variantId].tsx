@@ -3,20 +3,16 @@ import Head from "next/head";
 import { useRouter } from "next/dist/client/router";
 
 import { SocialIcons } from "../../components";
-import {
-  SelectedProduct,
-  PageHeader,
-  ProductId,
-  products,
-} from "../../components";
+import { SelectedProduct, PageHeader, products } from "../../components";
 import { Box } from "@material-ui/core";
 import { GetStaticPaths } from "next";
 import { PageContainer } from "../../components/PageContainer";
+import { ProductId, ProductVariantId } from "../../components/productPhotos";
 
-const VariantPage = () => {
+const VariantPage = <TProductId extends ProductId>() => {
   const { query } = useRouter();
-  const productId = query.productId as ProductId;
-  const variantId = query.variantId as string;
+  const productId = query.productId as TProductId;
+  const variantId = query.variantId as ProductVariantId<TProductId>;
 
   return (
     <>
@@ -27,6 +23,8 @@ const VariantPage = () => {
         <PageHeader forceSmall href={`/${productId}`} />
         <PageContainer>
           <SelectedProduct
+            // TODO TS problem
+            // @ts-ignore
             product={products[productId]}
             variantId={variantId}
           />

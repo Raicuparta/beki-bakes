@@ -3,10 +3,11 @@ import React, { useEffect } from "react";
 import { Container, Grid } from "@material-ui/core";
 import { useRouter } from "next/dist/client/router";
 
-import { PageHeader, ProductId, products, SocialIcons } from "../../components";
+import { PageHeader, products, SocialIcons } from "../../components";
 import { ListedProduct } from "../../components/ListedProduct";
 import { GetStaticPaths } from "next";
 import { PageContainer } from "../../components/PageContainer";
+import { ProductId } from "../../components/productPhotos";
 
 const ProductPage = () => {
   const { beforePopState, query } = useRouter();
