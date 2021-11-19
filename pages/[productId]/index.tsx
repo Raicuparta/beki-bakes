@@ -7,7 +7,7 @@ import { PageHeader, products, SocialIcons } from "../../components";
 import { ListedProduct } from "../../components/ListedProduct";
 import { GetStaticPaths } from "next";
 import { PageContainer } from "../../components/PageContainer";
-import { ProductId } from "../../components/productPhotos";
+import { ProductId, productPhotos } from "../../components/productPhotos";
 
 const ProductPage = () => {
   const { beforePopState, query } = useRouter();
@@ -40,7 +40,8 @@ const ProductPage = () => {
                 <ListedProduct
                   key={variantId}
                   href={`/${product.id}/${variantId}`}
-                  image={`/photos/${product.id}/${variantId}.jpg`}
+                  // @ts-ignore
+                  image={productPhotos[product.id][variantId]}
                   name={variantName}
                   price={0}
                 />

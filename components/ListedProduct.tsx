@@ -11,7 +11,7 @@ import Link from "next/link";
 type Props = {
   href: string;
   name: string;
-  image: string;
+  image: StaticImageData;
   price: number;
 };
 

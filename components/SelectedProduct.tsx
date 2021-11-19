@@ -10,7 +10,7 @@ import {
 import React, { useState } from "react";
 
 import { Product } from "./products";
-import { ProductId, ProductVariantId } from "./productPhotos";
+import { ProductId, productPhotos, ProductVariantId } from "./productPhotos";
 
 type Props<TProductId extends ProductId> = {
   product: Product<TProductId>;
@@ -36,7 +36,8 @@ export const SelectedProduct = <TProductId extends ProductId>({
         <Image
           title={name}
           alt={name}
-          src={`/photos/${id}/${variantId}.jpg`}
+          // @ts-ignore
+          src={productPhotos[id][variantId]}
           layout="responsive"
           width={16}
           height={12}
