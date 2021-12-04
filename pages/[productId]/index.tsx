@@ -1,6 +1,6 @@
 import Head from "next/head";
 import React, { useEffect } from "react";
-import { Breadcrumbs, Container, Grid, Link, Typography } from "@mui/material";
+import { Grid } from "@mui/material";
 import { useRouter } from "next/dist/client/router";
 
 import { PageHeader, products, SocialIcons } from "../../components";
@@ -8,6 +8,7 @@ import { ListedProduct } from "../../components/ListedProduct";
 import { GetStaticPaths } from "next";
 import { PageContainer } from "../../components/PageContainer";
 import { ProductId, productPhotos } from "../../components/productPhotos";
+import { BreadcrumbsList } from "../../components/BreadcrumbsList";
 
 const ProductPage = () => {
   const { beforePopState, query } = useRouter();
@@ -34,12 +35,9 @@ const ProductPage = () => {
       <main>
         <PageHeader forceSmall href="/" />
         <PageContainer>
-          <Breadcrumbs aria-label="breadcrumb" sx={{ mb: 2 }}>
-            <Link underline="hover" href="/" sx={{ color: "inherit" }}>
-              Home
-            </Link>
-            <Typography color="background.paper">{product.name}</Typography>
-          </Breadcrumbs>
+          <BreadcrumbsList
+            items={[{ title: "Home", href: "/" }, { title: product.name }]}
+          />
           <Grid container spacing={2} sx={{ mb: 2 }} justifyContent="center">
             {Object.entries(product.variants).map(
               ([variantId, variantName]) => (

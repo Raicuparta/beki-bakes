@@ -4,10 +4,10 @@ import { useRouter } from "next/dist/client/router";
 
 import { Product, SocialIcons } from "../../components";
 import { SelectedProduct, PageHeader, products } from "../../components";
-import { Box, Breadcrumbs, Link, Typography } from "@mui/material";
 import { GetStaticPaths } from "next";
 import { PageContainer } from "../../components/PageContainer";
 import { ProductId, ProductVariantId } from "../../components/productPhotos";
+import { BreadcrumbsList } from "../../components/BreadcrumbsList";
 
 const VariantPage = <TProductId extends ProductId>() => {
   const { query } = useRouter();
@@ -25,21 +25,13 @@ const VariantPage = <TProductId extends ProductId>() => {
       <main>
         <PageHeader forceSmall href={`/${productId}`} />
         <PageContainer>
-          <Breadcrumbs aria-label="breadcrumb" sx={{ mb: 2 }}>
-            <Link underline="hover" href="/" sx={{ color: "inherit" }}>
-              Home
-            </Link>
-            <Link
-              underline="hover"
-              href={`/${productId}`}
-              sx={{ color: "inherit" }}
-            >
-              {product.name}
-            </Link>
-            <Typography color="background.paper">
-              {product.variants[variantId]}
-            </Typography>
-          </Breadcrumbs>
+          <BreadcrumbsList
+            items={[
+              { title: "Home", href: "/" },
+              { title: product.name, href: `/${productId}` },
+              { title: product.variants[variantId] },
+            ]}
+          />
           <SelectedProduct product={product} variantId={variantId} />
         </PageContainer>
         <SocialIcons />
