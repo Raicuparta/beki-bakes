@@ -1,6 +1,7 @@
 // import '../styles/globals.css'
 import type { AppProps } from "next/app";
 import { Box, createTheme, CssBaseline, ThemeProvider } from "@mui/material";
+import { PageHeader } from "../components";
 
 const palette = {
   background: {
@@ -87,6 +88,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         }}
       />
       <CssBaseline />
+      <PageHeader href="/" />
       <Component {...pageProps} />
     </ThemeProvider>
   );

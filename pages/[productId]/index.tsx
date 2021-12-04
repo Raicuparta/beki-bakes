@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { Grid } from "@mui/material";
 import { useRouter } from "next/dist/client/router";
 
-import { PageHeader, products, SocialIcons } from "../../components";
+import { products } from "../../components";
 import { ListedProduct } from "../../components/ListedProduct";
 import { GetStaticPaths } from "next";
 import { PageContainer } from "../../components/PageContainer";
@@ -33,7 +33,6 @@ const ProductPage = () => {
         <title>bekibakes</title>
       </Head>
       <main>
-        <PageHeader forceSmall href="/" />
         <PageContainer>
           <BreadcrumbsList
             items={[{ title: "Home", href: "/" }, { title: product.name }]}
@@ -53,17 +52,16 @@ const ProductPage = () => {
             )}
           </Grid>
         </PageContainer>
-        <SocialIcons />
       </main>
     </>
   );
 };
 
-export const getStaticProps = async () => ({ props: {} });
+// export const getStaticProps = async () => ({ props: {} });
 
-export const getStaticPaths: GetStaticPaths = async () => ({
-  paths: Object.keys(products).map((productId) => ({ params: { productId } })),
-  fallback: false,
-});
+// export const getStaticPaths: GetStaticPaths = async () => ({
+//   paths: Object.keys(products).map((productId) => ({ params: { productId } })),
+//   fallback: false,
+// });
 
 export default ProductPage;

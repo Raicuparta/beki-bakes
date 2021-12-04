@@ -2,8 +2,8 @@ import React from "react";
 import Head from "next/head";
 import { useRouter } from "next/dist/client/router";
 
-import { Product, SocialIcons } from "../../components";
-import { SelectedProduct, PageHeader, products } from "../../components";
+import { Product } from "../../components";
+import { SelectedProduct, products } from "../../components";
 import { GetStaticPaths } from "next";
 import { PageContainer } from "../../components/PageContainer";
 import { ProductId, ProductVariantId } from "../../components/productPhotos";
@@ -23,7 +23,6 @@ const VariantPage = <TProductId extends ProductId>() => {
         <title>bekibakes</title>
       </Head>
       <main>
-        <PageHeader forceSmall href={`/${productId}`} />
         <PageContainer>
           <BreadcrumbsList
             items={[
@@ -34,26 +33,25 @@ const VariantPage = <TProductId extends ProductId>() => {
           />
           <SelectedProduct product={product} variantId={variantId} />
         </PageContainer>
-        <SocialIcons />
       </main>
     </>
   );
 };
 
-export const getStaticProps = async () => ({ props: {} });
+// export const getStaticProps = async () => ({ props: {} });
 
-export const getStaticPaths: GetStaticPaths = async () => ({
-  paths: Object.values(products)
-    .map(({ id: productId, variants }) =>
-      Object.keys(variants).map((variantId) => ({
-        params: {
-          productId,
-          variantId,
-        },
-      }))
-    )
-    .flat(),
-  fallback: false,
-});
+// export const getStaticPaths: GetStaticPaths = async () => ({
+//   paths: Object.values(products)
+//     .map(({ id: productId, variants }) =>
+//       Object.keys(variants).map((variantId) => ({
+//         params: {
+//           productId,
+//           variantId,
+//         },
+//       }))
+//     )
+//     .flat(),
+//   fallback: false,
+// });
 
 export default VariantPage;

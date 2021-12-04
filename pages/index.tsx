@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { Grid } from "@mui/material";
 import { useRouter } from "next/dist/client/router";
 
-import { PageHeader, products, SocialIcons } from "../components";
+import { products } from "../components";
 import { ListedProduct } from "../components/ListedProduct";
 import { PageContainer } from "../components/PageContainer";
 import { productPhotos } from "../components/productPhotos";
@@ -26,8 +26,6 @@ const Home = () => {
         <title>bekibakes</title>
       </Head>
       <main>
-        <PageHeader href="/" />
-        <SocialIcons />
         <PageContainer>
           <Grid container spacing={2} sx={{ mb: 2 }}>
             {Object.values(products).map(({ id, name }) => (

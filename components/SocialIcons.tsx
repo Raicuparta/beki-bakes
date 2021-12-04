@@ -6,13 +6,22 @@ import {
 } from "@mui/icons-material";
 
 export const SocialIcons = () => (
-  <Stack spacing={4} direction="row" justifyContent="center" sx={{ my: 2 }}>
+  <Stack
+    direction="column"
+    sx={{
+      justifyContent: "center",
+      height: "100%",
+      position: "absolute",
+      right: (theme) => theme.spacing(2),
+      top: 0,
+    }}
+  >
     <IconButton
       component="a"
       href="https://www.instagram.com/bekibakes"
       target="_blank"
       rel="noopener noreferrer"
-      color="primary"
+      color="inherit"
       size="large"
     >
       <InstagramIcon fontSize="large" />
@@ -22,7 +31,7 @@ export const SocialIcons = () => (
       href="https://www.facebook.com/bekibakeshop"
       target="_blank"
       rel="noopener noreferrer"
-      color="primary"
+      color="inherit"
       size="large"
     >
       <FacebookIcon fontSize="large" />
