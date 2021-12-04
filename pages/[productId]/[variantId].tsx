@@ -4,7 +4,7 @@ import { useRouter } from "next/dist/client/router";
 
 import { Product, SocialIcons } from "../../components";
 import { SelectedProduct, PageHeader, products } from "../../components";
-import { Box, Breadcrumbs, Link, Typography } from "@material-ui/core";
+import { Box, Breadcrumbs, Link, Typography } from "@mui/material";
 import { GetStaticPaths } from "next";
 import { PageContainer } from "../../components/PageContainer";
 import { ProductId, ProductVariantId } from "../../components/productPhotos";

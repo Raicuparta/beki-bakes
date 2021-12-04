@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
-import { Typography, Stack, Box, Container } from "@material-ui/core";
-import { ArrowBackIos as ArrowLeftIcon } from "@material-ui/icons";
+import { Typography, Stack, Box, Container } from "@mui/material";
+import { ArrowBackIos as ArrowLeftIcon } from "@mui/icons-material";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 

@@ -1,6 +1,6 @@
 import Head from "next/head";
 import React, { useEffect } from "react";
-import { Grid } from "@material-ui/core";
+import { Grid } from "@mui/material";
 import { useRouter } from "next/dist/client/router";
 
 import { PageHeader, products, SocialIcons } from "../components";

@@ -1,11 +1,6 @@
 // import '../styles/globals.css'
 import type { AppProps } from "next/app";
-import {
-  Box,
-  createTheme,
-  CssBaseline,
-  ThemeProvider,
-} from "@material-ui/core";
+import { Box, createTheme, CssBaseline, ThemeProvider } from "@mui/material";
 
 const palette = {
   background: {

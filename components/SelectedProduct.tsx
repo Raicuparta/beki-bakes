@@ -6,7 +6,7 @@ import {
   Box,
   Button,
   Typography,
-} from "@material-ui/core";
+} from "@mui/material";
 import React, { useState } from "react";
 
 import { Product } from "./products";

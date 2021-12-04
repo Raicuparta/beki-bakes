@@ -4,7 +4,7 @@ import {
   CardContent,
   Typography,
   Grid,
-} from "@material-ui/core";
+} from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
 

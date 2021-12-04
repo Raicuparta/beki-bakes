@@ -1,9 +1,9 @@
-import { Stack, IconButton } from "@material-ui/core";
+import { Stack, IconButton } from "@mui/material";
 import React from "react";
 import {
   Instagram as InstagramIcon,
   Facebook as FacebookIcon,
-} from "@material-ui/icons";
+} from "@mui/icons-material";
 
 export const SocialIcons = () => (
   <Stack spacing={4} direction="row" justifyContent="center" sx={{ my: 2 }}>
