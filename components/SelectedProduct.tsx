@@ -1,18 +1,12 @@
 import Image from "next/image";
-import {
-  Card,
-  CardContent,
-  Stack,
-  Box,
-  Button,
-  Typography,
-} from "@mui/material";
+import { Card, CardContent, Stack, Box, Typography } from "@mui/material";
 import React, { useState } from "react";
 
 import { Product } from "./products";
 import { ProductId, productPhotos, ProductVariantId } from "./productPhotos";
 import { QuantitySelect } from "./QuantitySelect";
 import { ExpandMore, InfoOutlined } from "@mui/icons-material";
+import { ScrollToOnMount } from "./ScrollToOnMount";
 
 type Props<TProductId extends ProductId> = {
   product: Product<TProductId>;
@@ -68,11 +62,12 @@ export const SelectedProduct = <TProductId extends ProductId>({
           </Stack>
         </CardContent>
         {product.description && isDescriptionExpanded && (
-          <CardContent
+          <ScrollToOnMount
+            component={CardContent}
             sx={{ bgcolor: "background.light", color: "text.secondary" }}
           >
             {product.description}
-          </CardContent>
+          </ScrollToOnMount>
         )}
         <span />
       </Card>
