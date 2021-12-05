@@ -6,6 +6,7 @@ import { PageHeader } from "../components";
 const palette = {
   background: {
     paper: "#002555",
+    light: "#ffffff",
   },
   text: {
     primary: "#ffffff",
@@ -14,7 +15,11 @@ const palette = {
   primary: {
     main: "#002555",
   },
-};
+  action: {
+    disabled: "#002555",
+    disabledBackground: "#ffffff",
+  },
+} as const;
 
 const theme = createTheme({
   typography: {
@@ -23,48 +28,39 @@ const theme = createTheme({
     ),
   },
   palette,
-  shape: {
-    borderRadius: 0,
-  },
-  shadows: [
-    "none",
-    "none",
-    "none",
-    "none",
-    "none",
-    "none",
-    "none",
-    "none",
-    "none",
-    "none",
-    "none",
-    "none",
-    "none",
-    "none",
-    "none",
-    "none",
-    "none",
-    "none",
-    "none",
-    "none",
-    "none",
-    "none",
-    "none",
-    "none",
-    "none",
-  ],
+  // shadows: [
+  //   "none",
+  //   "none",
+  //   "none",
+  //   "none",
+  //   "none",
+  //   "none",
+  //   "none",
+  //   "none",
+  //   "none",
+  //   "none",
+  //   "none",
+  //   "none",
+  //   "none",
+  //   "none",
+  //   "none",
+  //   "none",
+  //   "none",
+  //   "none",
+  //   "none",
+  //   "none",
+  //   "none",
+  //   "none",
+  //   "none",
+  //   "none",
+  //   "none",
+  // ],
   components: {
     MuiButton: {
       styleOverrides: {
-        contained: {
-          border: "2px solid",
-          background: "white",
-          borderColor: palette.primary.main,
-          color: palette.primary.main,
-          ":hover": {
-            background: palette.background.paper,
-            color: "white",
-          },
+        contained: {},
+        root: {
+          ":disabled": {},
         },
       },
     },
@@ -84,6 +80,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           zIndex: -1,
           backgroundImage: "url(/transparent-snail.png)",
           backgroundSize: "100px",
+          bgcolor: "#eaf2ff",
           transform: "rotate(45deg)",
         }}
       />
