@@ -26,7 +26,7 @@ const VariantPage = <TProductId extends ProductId>() => {
         <PageContainer>
           <BreadcrumbsList
             items={[
-              { title: "Home", href: "/" },
+              { title: "Products", href: "/" },
               { title: product.name, href: `/${productId}` },
               { title: product.variants[variantId] },
             ]}

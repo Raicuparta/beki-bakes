@@ -7,6 +7,7 @@ import { products } from "../components";
 import { ListedProduct } from "../components/ListedProduct";
 import { PageContainer } from "../components/PageContainer";
 import { productPhotos } from "../components/productPhotos";
+import { BreadcrumbsList } from "../components/BreadcrumbsList";
 
 const Home = () => {
   const { beforePopState } = useRouter();
@@ -27,6 +28,7 @@ const Home = () => {
       </Head>
       <main>
         <PageContainer>
+          <BreadcrumbsList items={[{ title: "Products" }]} />
           <Grid container spacing={2} sx={{ mb: 2 }}>
             {Object.values(products).map(({ id, name }) => (
               <ListedProduct

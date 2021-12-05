@@ -35,7 +35,7 @@ const ProductPage = () => {
       <main>
         <PageContainer>
           <BreadcrumbsList
-            items={[{ title: "Home", href: "/" }, { title: product.name }]}
+            items={[{ title: "Products", href: "/" }, { title: product.name }]}
           />
           <Grid container spacing={2} sx={{ mb: 2 }} justifyContent="center">
             {Object.entries(product.variants).map(
