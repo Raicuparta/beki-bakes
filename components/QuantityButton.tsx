@@ -19,7 +19,6 @@ export const QuantityButton = (props: Props) => {
         fontFamily: "serif",
         fontSize: "1em",
         lineHeight: "1em",
-        textTransform: "none",
       }}
       disabled={props.isSelected}
       onClick={props.onClick}

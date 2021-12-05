@@ -1,7 +1,8 @@
-import { Typography, Stack, Box, Container } from "@mui/material";
+import { Typography, Stack, Box, Container, Button } from "@mui/material";
 import React from "react";
 import Image from "next/image";
 import { SocialIcons } from ".";
+import Link from "next/link";
 
 const size = 75;
 
@@ -20,34 +21,38 @@ export const PageHeader = () => {
       }}
     >
       <Container maxWidth="sm" sx={{ position: "relative" }}>
-        <Stack
-          direction={"column"}
-          sx={{
-            pt: 2,
-            pb: 1,
-            alignItems: "center",
-            justifyContent: "center",
-            position: "relative",
-          }}
-        >
-          <Image
-            src="/snail-halfwhite.svg"
-            alt="beki bakes"
-            width={size}
-            height={size}
-            priority
-          />
-          <Typography
-            component="h1"
-            align="center"
+        <Link passHref href="/">
+          <Stack
+            component={Button}
+            direction={"column"}
             sx={{
-              fontWeight: "bold",
-              fontSize: 30,
+              pt: 2,
+              pb: 1,
+              color: "text.primary",
+              alignItems: "center",
+              justifyContent: "center",
+              position: "relative",
             }}
           >
-            bekibakes
-          </Typography>
-        </Stack>
+            <Image
+              src="/snail-halfwhite.svg"
+              alt="beki bakes"
+              width={size}
+              height={size}
+              priority
+            />
+            <Typography
+              component="h1"
+              align="center"
+              sx={{
+                fontWeight: "bold",
+                fontSize: 30,
+              }}
+            >
+              bekibakes
+            </Typography>
+          </Stack>
+        </Link>
         <SocialIcons />
       </Container>
     </Box>
