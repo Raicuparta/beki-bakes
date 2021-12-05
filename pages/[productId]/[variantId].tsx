@@ -37,20 +37,20 @@ const VariantPage = <TProductId extends ProductId>() => {
   );
 };
 
-// export const getStaticProps = async () => ({ props: {} });
+export const getStaticProps = async () => ({ props: {} });
 
-// export const getStaticPaths: GetStaticPaths = async () => ({
-//   paths: Object.values(products)
-//     .map(({ id: productId, variants }) =>
-//       Object.keys(variants).map((variantId) => ({
-//         params: {
-//           productId,
-//           variantId,
-//         },
-//       }))
-//     )
-//     .flat(),
-//   fallback: false,
-// });
+export const getStaticPaths: GetStaticPaths = async () => ({
+  paths: Object.values(products)
+    .map(({ id: productId, variants }) =>
+      Object.keys(variants).map((variantId) => ({
+        params: {
+          productId,
+          variantId,
+        },
+      }))
+    )
+    .flat(),
+  fallback: false,
+});
 
 export default VariantPage;

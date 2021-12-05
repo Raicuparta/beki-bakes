@@ -55,11 +55,11 @@ const ProductPage = () => {
   );
 };
 
-// export const getStaticProps = async () => ({ props: {} });
+export const getStaticProps = async () => ({ props: {} });
 
-// export const getStaticPaths: GetStaticPaths = async () => ({
-//   paths: Object.keys(products).map((productId) => ({ params: { productId } })),
-//   fallback: false,
-// });
+export const getStaticPaths: GetStaticPaths = async () => ({
+  paths: Object.keys(products).map((productId) => ({ params: { productId } })),
+  fallback: false,
+});
 
 export default ProductPage;
