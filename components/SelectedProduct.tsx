@@ -12,6 +12,7 @@ import React, { useState } from "react";
 import { Product } from "./products";
 import { ProductId, productPhotos, ProductVariantId } from "./productPhotos";
 import { QuantitySelect } from "./QuantitySelect";
+import { ExpandMore, InfoOutlined } from "@mui/icons-material";
 
 type Props<TProductId extends ProductId> = {
   product: Product<TProductId>;
@@ -22,6 +23,7 @@ export const SelectedProduct = <TProductId extends ProductId>({
   product,
   variantId,
 }: Props<TProductId>) => {
+  const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false);
   if (!product) return null;
 
   const { id, name, variants, packages } = product;
@@ -47,10 +49,31 @@ export const SelectedProduct = <TProductId extends ProductId>({
           priority
         />
         <CardContent sx={{ py: 1 }}>
-          <Typography variant="h6" align="center">
-            {fullName}
-          </Typography>
+          <Stack
+            onClick={() =>
+              setIsDescriptionExpanded((isExpanded) => !isExpanded)
+            }
+            direction="row"
+            sx={{ justifyContent: "space-between" }}
+          >
+            <Typography variant="h6" align="center">
+              {fullName}
+            </Typography>
+            {product.description && (
+              <Stack direction="row" sx={{ alignItems: "center" }}>
+                <InfoOutlined />
+                <ExpandMore fontSize="small" />
+              </Stack>
+            )}
+          </Stack>
         </CardContent>
+        {product.description && isDescriptionExpanded && (
+          <CardContent
+            sx={{ bgcolor: "background.light", color: "text.secondary" }}
+          >
+            {product.description}
+          </CardContent>
+        )}
         <span />
       </Card>
       <QuantitySelect packages={packages} fullName={fullName} />

@@ -10,10 +10,12 @@ export type Product<TProductId extends ProductId> = {
   id: TProductId;
   variants: Record<ProductVariantId<TProductId>, string>;
   packages: Package[];
+  description?: string;
 };
 
 const macarons: Product<"macarons"> = {
   name: "Macarons",
+  description: "This product has a lovely lovely description",
   id: "macarons",
   variants: {
     raspberry: "Raspberry",
