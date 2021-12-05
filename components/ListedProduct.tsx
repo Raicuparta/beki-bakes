@@ -30,6 +30,7 @@ export const ListedProduct = ({ href, name, image }: Props) => {
               height={3}
               objectFit="cover"
               sizes="200px"
+              quality={50}
               priority
             />
             <CardContent sx={{ py: 1 }}>

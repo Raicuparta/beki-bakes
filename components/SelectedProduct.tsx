@@ -36,10 +36,11 @@ export const SelectedProduct = <TProductId extends ProductId>({
           // @ts-ignore
           src={productPhotos[id][variantId]}
           layout="responsive"
-          width={16}
-          height={12}
+          width={4}
+          height={3}
           objectFit="cover"
           sizes="500px"
+          quality={50}
           priority
         />
         <CardContent sx={{ py: 1 }}>
