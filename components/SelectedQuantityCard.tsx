@@ -35,7 +35,7 @@ export const SelectedQuantityCard = (props: Props) => (
         <Button
           variant="contained"
           startIcon={<WhatsApp />}
-          href="https://woops.com"
+          href="https://wa.me/623006482"
           target="_blank"
           rel="noopener noreferrer"
         >

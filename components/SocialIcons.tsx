@@ -1,9 +1,6 @@
+import { Instagram, WhatsApp, Facebook } from "@mui/icons-material";
 import { Stack, IconButton } from "@mui/material";
 import React from "react";
-import {
-  Instagram as InstagramIcon,
-  Facebook as FacebookIcon,
-} from "@mui/icons-material";
 
 export const SocialIcons = () => (
   <Stack
@@ -22,9 +19,19 @@ export const SocialIcons = () => (
       target="_blank"
       rel="noopener noreferrer"
       color="inherit"
-      size="large"
+      size="small"
     >
-      <InstagramIcon fontSize="large" />
+      <Instagram />
+    </IconButton>
+    <IconButton
+      component="a"
+      href="https://wa.me/623006482"
+      target="_blank"
+      rel="noopener noreferrer"
+      color="inherit"
+      size="small"
+    >
+      <WhatsApp />
     </IconButton>
     <IconButton
       component="a"
@@ -32,9 +39,9 @@ export const SocialIcons = () => (
       target="_blank"
       rel="noopener noreferrer"
       color="inherit"
-      size="large"
+      size="small"
     >
-      <FacebookIcon fontSize="large" />
+      <Facebook />
     </IconButton>
   </Stack>
 );
