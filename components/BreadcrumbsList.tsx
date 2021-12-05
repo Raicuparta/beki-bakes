@@ -1,6 +1,7 @@
 import React from "react";
 import NextLink from "next/link";
 import { Breadcrumbs, Button, Link, Typography } from "@mui/material";
+import { NavigateNextRounded } from "@mui/icons-material";
 
 export type BreadcrumbItem = {
   title: string;
@@ -21,7 +22,11 @@ const BreadcrumbItem = (props: BreadcrumbItem) => (
 
 export const BreadcrumbsList = (props: Props) => {
   return (
-    <Breadcrumbs aria-label="breadcrumb" sx={{ mb: 2 }}>
+    <Breadcrumbs
+      aria-label="breadcrumb"
+      separator={<NavigateNextRounded fontSize="small" />}
+      sx={{ mb: 2 }}
+    >
       {props.items.map((item) => (
         <BreadcrumbItem key={item.title} {...item} />
       ))}

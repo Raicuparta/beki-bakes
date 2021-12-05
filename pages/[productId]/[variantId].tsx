@@ -28,7 +28,6 @@ const VariantPage = <TProductId extends ProductId>() => {
             items={[
               { title: "Products", href: "/" },
               { title: product.name, href: `/${productId}` },
-              { title: product.variants[variantId] },
             ]}
           />
           <SelectedProduct product={product} variantId={variantId} />
