@@ -74,7 +74,15 @@ const rollCake: Product<"rollCake"> = {
   packages: [
     {
       quantity: 1,
-      price: 10,
+      price: 20,
+    },
+    {
+      quantity: 2,
+      price: 40,
+    },
+    {
+      quantity: 3,
+      price: 60,
     },
   ],
 };
