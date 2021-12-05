@@ -1,33 +1,11 @@
-/* eslint-disable @next/next/no-img-element */
 import { Typography, Stack, Box, Container } from "@mui/material";
-import { ArrowBackIos as ArrowLeftIcon } from "@mui/icons-material";
-import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React from "react";
+import Image from "next/image";
 import { SocialIcons } from ".";
 
-type Props = {
-  forceSmall?: boolean;
-  href: string;
-};
+const size = 75;
 
-export const PageHeader = ({ forceSmall = false, href }: Props) => {
-  const [isSmall, setIsSmall] = useState(false);
-
-  const size = isSmall ? 40 : 75;
-
-  useEffect(() => {
-    if (forceSmall) {
-      setIsSmall(forceSmall);
-      return;
-    }
-    const onScroll = () => {
-      setIsSmall(window.scrollY > 80);
-    };
-    window.addEventListener("scroll", onScroll);
-
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [forceSmall]);
-
+export const PageHeader = () => {
   return (
     <Box
       component="a"
@@ -43,34 +21,28 @@ export const PageHeader = ({ forceSmall = false, href }: Props) => {
     >
       <Container maxWidth="sm" sx={{ position: "relative" }}>
         <Stack
-          direction={isSmall ? "row" : "column"}
+          direction={"column"}
           sx={{
-            pt: isSmall ? 1 : 2,
+            pt: 2,
             pb: 1,
             alignItems: "center",
             justifyContent: "center",
             position: "relative",
           }}
         >
-          {isSmall && (
-            <ArrowLeftIcon
-              fontSize="small"
-              sx={{ position: "absolute", left: 0 }}
-            />
-          )}
-          <img
+          <Image
             src="/snail-halfwhite.svg"
             alt="beki bakes"
             width={size}
             height={size}
+            priority
           />
           <Typography
             component="h1"
             align="center"
             sx={{
               fontWeight: "bold",
-              fontSize: isSmall ? 25 : 30,
-              ml: isSmall ? 1 : 0,
+              fontSize: 30,
             }}
           >
             bekibakes

@@ -88,7 +88,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         }}
       />
       <CssBaseline />
-      <PageHeader href="/" />
+      <PageHeader />
       <Component {...pageProps} />
     </ThemeProvider>
   );
