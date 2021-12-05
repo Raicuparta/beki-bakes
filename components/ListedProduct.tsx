@@ -26,8 +26,8 @@ export const ListedProduct = ({ href, name, image }: Props) => {
               alt={name}
               src={image}
               layout="responsive"
-              width={16}
-              height={9}
+              width={4}
+              height={3}
               objectFit="cover"
               sizes="200px"
               priority

@@ -1,4 +1,4 @@
-import main from "./matcha.jpg";
+import main from "./rollCake.jpg";
 import caramel from "./caramel.jpg";
 import matcha from "./matcha.jpg";
 import chestnut from "./chestnut.jpg";
