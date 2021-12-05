@@ -110,8 +110,8 @@ const cookies: Product<"cookies"> = {
 };
 
 export const products = {
-  macarons,
-  poundCake,
   rollCake,
+  poundCake,
   cookies,
+  macarons,
 } as const;
