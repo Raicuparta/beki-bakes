@@ -73,15 +73,17 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Box
         sx={{
           position: "fixed",
-          top: "-50vh",
-          left: "-50vw",
-          width: "200vw",
-          height: "200vh",
+          top: 0,
+          left: 0,
+          width: "100vw",
+          height: "100vh",
           zIndex: -1,
           backgroundImage: "url(/transparent-snail.png)",
           backgroundSize: "100px",
-          bgcolor: "#eaf2ff",
-          transform: "rotate(45deg)",
+          bgcolor: "#ecf4ff",
+          // TODO: rotate background in source image.
+          // transformOrigin: "center",
+          // transform: "rotate(45deg)",
         }}
       />
       <CssBaseline />
