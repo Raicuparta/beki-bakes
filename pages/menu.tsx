@@ -4,7 +4,7 @@ import { Box, Stack, Button, Typography } from "@mui/material";
 import Image from "next/image";
 import { RollCakeIcon, CookieIcon } from "../components/icons";
 
-const snailSize = 80;
+const snailSize = 60;
 
 type Props = {
   children: React.ReactNode;
@@ -19,7 +19,7 @@ const MenuItem = (props: Props) => (
     <Stack sx={{ alignItems: "center" }}>
       <Typography variant="h5">{props.title}</Typography>
       <Typography fontSize={15}>{props.description}</Typography>
-      <Typography fontSize={25} lineHeight={1}>
+      <Typography fontSize={30} lineHeight={1}>
         €{props.price}
       </Typography>
     </Stack>
@@ -87,7 +87,7 @@ const Menu = () => (
         <Box
           sx={{
             background: "white",
-            p: 5,
+            py: 5,
             color: "text.secondary",
             flex: 1,
             position: "relative",
@@ -111,21 +111,21 @@ const Menu = () => (
           <Stack spacing={6}>
             <MenuItem
               title="Matcha Azuki Roll"
-              description="Matcha cake with azuki filling and cream and shit"
+              description="Matcha chiffon cake with fresh whipped cream and azuki paste"
               price={20}
             >
               <MatchaRollIcon />
             </MenuItem>
             <MenuItem
               title="Chocolate Chestnut Roll"
-              description="Matcha cake with azuki filling and cream and shit"
+              description="Chocolate chiffon cake with fresh whipped cream and chestnut paste"
               price={20}
             >
               <ChocolateRollIcon />
             </MenuItem>
             <MenuItem
               title="Vanilla Salted Caramel Roll"
-              description="Matcha cake with azuki filling and cream and shit"
+              description="Vanilla chiffon cake with fresh whipped cream and salted caramel mousse"
               price={20}
             >
               <VanillaRollIcon />
@@ -152,7 +152,7 @@ const Menu = () => (
             </MenuItem> */}
             <MenuItem
               title="Assorted Box"
-              description="Matcha cake with azuki filling and cream and shit"
+              description='3 half-sized rolls of each flavour and 4 "Hup Toh Soh" Walnut cookies'
               price={32}
             >
               <Stack>
