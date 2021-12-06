@@ -1,5 +1,5 @@
 import Head from "next/head";
-import React, { useEffect } from "react";
+import React from "react";
 import { Grid } from "@mui/material";
 import { useRouter } from "next/dist/client/router";
 
@@ -11,15 +11,7 @@ import { ProductId, productPhotos } from "../../components/productPhotos";
 import { BreadcrumbsList } from "../../components/BreadcrumbsList";
 
 const ProductPage = () => {
-  const { beforePopState, query } = useRouter();
-  useEffect(() => {
-    beforePopState((state) => {
-      // Disable scroll restoration on navigation,
-      // to prevent messy animations.
-      state.options.scroll = false;
-      return true;
-    });
-  }, [beforePopState]);
+  const { query } = useRouter();
 
   const productId = query.productId as ProductId;
   if (!productId) return null;
