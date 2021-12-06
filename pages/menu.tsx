@@ -4,7 +4,7 @@ import { Box, Stack, Button, Typography } from "@mui/material";
 import Image from "next/image";
 import { RollCakeIcon, CookieIcon } from "../components/icons";
 
-const snailSize = 60;
+const snailSize = 70;
 
 type Props = {
   children: React.ReactNode;
@@ -59,7 +59,7 @@ const Menu = () => (
       <Stack
         sx={{
           width: 540,
-          height: 1920 / 2,
+          height: 960,
           margin: "auto",
         }}
       >
@@ -108,6 +108,16 @@ const Menu = () => (
               priority
             />
           </Box>
+          <Box
+            sx={{
+              position: "absolute",
+              left: (theme) => theme.spacing(2),
+              bottom: (theme) => theme.spacing(2),
+            }}
+          >
+            <Typography>Full-size roll: 21 x 9 x 7 cm</Typography>
+            <Typography>Half-size roll: 10.5 x 9 x 7 cm</Typography>
+          </Box>
           <Stack spacing={6}>
             <MenuItem
               title="Matcha Azuki Roll"
@@ -152,7 +162,7 @@ const Menu = () => (
             </MenuItem> */}
             <MenuItem
               title="Assorted Box"
-              description='3 half-sized rolls of each flavour and 4 "Hup Toh Soh" Walnut cookies'
+              description='3 half-size rolls of each flavour and 4 "Hup Toh Soh" Walnut cookies'
               price={32}
             >
               <Stack>
