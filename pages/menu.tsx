@@ -2,7 +2,7 @@ import Head from "next/head";
 import React from "react";
 import { Box, Stack, Button, Typography } from "@mui/material";
 import Image from "next/image";
-import { RollCakeIcon } from "../components/icons/roll-cake-icon";
+import { RollCakeIcon, CookieIcon } from "../components/icons";
 
 import { products } from "../components";
 import { ListedProduct } from "../components/ListedProduct";
@@ -26,6 +26,30 @@ const MenuItem = (props: Props) => (
       <Typography fontSize={20}>€{props.price}</Typography>
     </Stack>
   </Stack>
+);
+
+const MatchaRollIcon = () => (
+  <RollCakeIcon
+    outlineColor="#677d2b"
+    cakeColor="#a5ad55"
+    fillingColor="#a44b3c"
+  />
+);
+
+const ChocolateRollIcon = () => (
+  <RollCakeIcon
+    outlineColor="#251d17"
+    cakeColor="#4c392b"
+    fillingColor="#a58a71"
+  />
+);
+
+const VanillaRollIcon = () => (
+  <RollCakeIcon
+    outlineColor="#b8954a"
+    cakeColor="#ebd691"
+    fillingColor="#d09e6f"
+  />
 );
 
 const Menu = () => (
@@ -88,25 +112,43 @@ const Menu = () => (
           </Box>
           <Stack spacing={2}>
             <MenuItem title="Matcha Azuki Roll" price={20}>
-              <RollCakeIcon
-                outlineColor="#677d2b"
-                cakeColor="#a5ad55"
-                fillingColor="#a44b3c"
-              />
+              <MatchaRollIcon />
             </MenuItem>
             <MenuItem title="Chocolate Chestnut Roll" price={20}>
-              <RollCakeIcon
-                outlineColor="#251d17"
-                cakeColor="#4c392b"
-                fillingColor="#a58a71"
-              />
+              <ChocolateRollIcon />
             </MenuItem>
             <MenuItem title="Vanilla Salted Caramel Roll" price={20}>
-              <RollCakeIcon
-                outlineColor="#b8954a"
-                cakeColor="#ebd691"
-                fillingColor="#d09e6f"
-              />
+              <VanillaRollIcon />
+            </MenuItem>
+            <MenuItem title="Box Set" price={32}>
+              <Stack>
+                <Stack direction="row" spacing={0.5}>
+                  <MatchaRollIcon />
+                  <ChocolateRollIcon />
+                </Stack>
+                <Stack
+                  direction="row"
+                  spacing={0.5}
+                  sx={{ alignItems: "center", justifyContent: "center" }}
+                >
+                  <VanillaRollIcon />
+                  <CookieIcon />
+                </Stack>
+              </Stack>
+            </MenuItem>
+            <MenuItem title="Box Set" price={32}>
+              <Stack>
+                <Stack
+                  direction="row"
+                  spacing={1}
+                  sx={{ alignItems: "center" }}
+                >
+                  <MatchaRollIcon />
+                  <ChocolateRollIcon />
+                  <VanillaRollIcon />
+                  <CookieIcon />
+                </Stack>
+              </Stack>
             </MenuItem>
           </Stack>
         </Box>
