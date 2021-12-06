@@ -2,8 +2,8 @@ import { Card, CardContent, Stack, Button, Typography } from "@mui/material";
 import React from "react";
 
 import { Package } from "./products";
-import { Facebook, Instagram, WhatsApp } from "@mui/icons-material";
 import { ScrollToOnMount } from "./ScrollToOnMount";
+import { socialProfiles } from "./socialProfiles";
 
 type Props = {
   selectedPackage: Package;
@@ -23,33 +23,18 @@ export const SelectedQuantityCard = (props: Props) => (
         channels:
       </Typography>
       <Stack spacing={1} sx={{ mt: 1 }}>
-        <Button
-          variant="contained"
-          startIcon={<Instagram />}
-          href="https://www.instagram.com/bekibakes"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Instagram
-        </Button>
-        <Button
-          variant="contained"
-          startIcon={<WhatsApp />}
-          href="https://wa.me/623006482"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Whatsapp
-        </Button>
-        <Button
-          variant="contained"
-          startIcon={<Facebook />}
-          href="https://www.facebook.com/bekibakeshop"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Facebook
-        </Button>
+        {socialProfiles.map((socialProfile) => (
+          <Button
+            key={socialProfile.url}
+            variant="contained"
+            startIcon={<socialProfile.icon />}
+            href={socialProfile.url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {socialProfile.title}
+          </Button>
+        ))}
       </Stack>
     </CardContent>
   </ScrollToOnMount>

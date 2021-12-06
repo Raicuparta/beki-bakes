@@ -1,6 +1,6 @@
-import { Instagram, WhatsApp, Facebook } from "@mui/icons-material";
 import { Stack, IconButton } from "@mui/material";
 import React from "react";
+import { socialProfiles } from "./socialProfiles";
 
 export const SocialIcons = () => (
   <Stack
@@ -13,35 +13,18 @@ export const SocialIcons = () => (
       top: 0,
     }}
   >
-    <IconButton
-      component="a"
-      href="https://www.instagram.com/bekibakes"
-      target="_blank"
-      rel="noopener noreferrer"
-      color="inherit"
-      size="small"
-    >
-      <Instagram />
-    </IconButton>
-    <IconButton
-      component="a"
-      href="https://wa.me/623006482"
-      target="_blank"
-      rel="noopener noreferrer"
-      color="inherit"
-      size="small"
-    >
-      <WhatsApp />
-    </IconButton>
-    <IconButton
-      component="a"
-      href="https://www.facebook.com/bekibakeshop"
-      target="_blank"
-      rel="noopener noreferrer"
-      color="inherit"
-      size="small"
-    >
-      <Facebook />
-    </IconButton>
+    {socialProfiles.map((socialProfile) => (
+      <IconButton
+        key={socialProfile.url}
+        component="a"
+        href={socialProfile.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        color="inherit"
+        size="small"
+      >
+        <socialProfile.icon />
+      </IconButton>
+    ))}
   </Stack>
 );
