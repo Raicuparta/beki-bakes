@@ -4,18 +4,13 @@ import { Box, Stack, Button, Typography } from "@mui/material";
 import Image from "next/image";
 import { RollCakeIcon, CookieIcon } from "../components/icons";
 
-import { products } from "../components";
-import { ListedProduct } from "../components/ListedProduct";
-import { PageContainer } from "../components/PageContainer";
-import { productPhotos } from "../components/productPhotos";
-import { BreadcrumbsList } from "../components/BreadcrumbsList";
-
 const snailSize = 80;
 
 type Props = {
   children: React.ReactNode;
   title: string;
   price: number;
+  description: string;
 };
 
 const MenuItem = (props: Props) => (
@@ -23,7 +18,10 @@ const MenuItem = (props: Props) => (
     {props.children}
     <Stack sx={{ alignItems: "center" }}>
       <Typography variant="h5">{props.title}</Typography>
-      <Typography fontSize={20}>€{props.price}</Typography>
+      <Typography fontSize={15}>{props.description}</Typography>
+      <Typography fontSize={25} lineHeight={1}>
+        €{props.price}
+      </Typography>
     </Stack>
   </Stack>
 );
@@ -89,7 +87,7 @@ const Menu = () => (
         <Box
           sx={{
             background: "white",
-            p: 2,
+            p: 5,
             color: "text.secondary",
             flex: 1,
             position: "relative",
@@ -110,17 +108,33 @@ const Menu = () => (
               priority
             />
           </Box>
-          <Stack spacing={2}>
-            <MenuItem title="Matcha Azuki Roll" price={20}>
+          <Stack spacing={6}>
+            <MenuItem
+              title="Matcha Azuki Roll"
+              description="Matcha cake with azuki filling and cream and shit"
+              price={20}
+            >
               <MatchaRollIcon />
             </MenuItem>
-            <MenuItem title="Chocolate Chestnut Roll" price={20}>
+            <MenuItem
+              title="Chocolate Chestnut Roll"
+              description="Matcha cake with azuki filling and cream and shit"
+              price={20}
+            >
               <ChocolateRollIcon />
             </MenuItem>
-            <MenuItem title="Vanilla Salted Caramel Roll" price={20}>
+            <MenuItem
+              title="Vanilla Salted Caramel Roll"
+              description="Matcha cake with azuki filling and cream and shit"
+              price={20}
+            >
               <VanillaRollIcon />
             </MenuItem>
-            <MenuItem title="Box Set" price={32}>
+            {/* <MenuItem
+              title="Assorted Box"
+              description="Matcha cake with azuki filling and cream and shit"
+              price={32}
+            >
               <Stack>
                 <Stack direction="row" spacing={0.5}>
                   <MatchaRollIcon />
@@ -135,8 +149,12 @@ const Menu = () => (
                   <CookieIcon />
                 </Stack>
               </Stack>
-            </MenuItem>
-            <MenuItem title="Box Set" price={32}>
+            </MenuItem> */}
+            <MenuItem
+              title="Assorted Box"
+              description="Matcha cake with azuki filling and cream and shit"
+              price={32}
+            >
               <Stack>
                 <Stack
                   direction="row"
