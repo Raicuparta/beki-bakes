@@ -24,14 +24,14 @@ const Menu = () => (
           height: 1920 / 2,
           background: "white",
           margin: "auto",
+          p: 2,
+          color: "text.secondary",
         }}
       >
         <Stack
           direction={"column"}
           sx={{
-            pt: 2,
             pb: 1,
-            color: "text.primary",
             alignItems: "center",
             justifyContent: "center",
             position: "relative",
@@ -50,27 +50,34 @@ const Menu = () => (
             sx={{
               fontWeight: "bold",
               fontSize: 25,
-              color: "text.secondary",
             }}
           >
             bekibakes
           </Typography>
         </Stack>
-        <RollCakeIcon
-          outlineColor="#000000"
-          cakeColor="#4c392b"
-          fillingColor="#a58a71"
-        />
-        <RollCakeIcon
-          outlineColor="#677d2b"
-          cakeColor="#a3b554"
-          fillingColor="#a44b3c"
-        />
-        <RollCakeIcon
-          outlineColor="#b8954a"
-          cakeColor="#ebd691"
-          fillingColor="#d09e6f"
-        />
+        <Stack>
+          <Stack direction="row" spacing={2} sx={{ alignItems: "center" }}>
+            <RollCakeIcon
+              outlineColor="#677d2b"
+              cakeColor="#a3b554"
+              fillingColor="#a44b3c"
+            />
+            <Stack>
+              <Typography>Matcha outside azuki inside hehe</Typography>
+              <Typography>Azuki inside hehe</Typography>
+            </Stack>
+          </Stack>
+          <RollCakeIcon
+            outlineColor="#251d17"
+            cakeColor="#4c392b"
+            fillingColor="#a58a71"
+          />
+          <RollCakeIcon
+            outlineColor="#b8954a"
+            cakeColor="#ebd691"
+            fillingColor="#d09e6f"
+          />
+        </Stack>
       </Box>
     </main>
   </>

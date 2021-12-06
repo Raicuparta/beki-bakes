@@ -4,26 +4,37 @@ type Props = {
   fillingColor: string;
 };
 
-export const RollCakeIcon = (props: Props) => (
+const size = 60;
+const outlineWidth = 20;
+const cakeWidth = 71;
+
+export const RollCakeIcon = ({
+  outlineColor,
+  cakeColor,
+  fillingColor,
+}: Props) => (
   <svg
     version="1.2"
     baseProfile="tiny-ps"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 534 534"
-    width="100"
-    height="100"
+    width={size}
+    height={size}
+    style={{
+      fill: "none",
+      strokeLinecap: "round",
+      strokeLinejoin: "round",
+    }}
   >
     <title>roll-cake-icon</title>
     <style>
       {`
 		tspan { white-space:pre }
-		.cake { fill: none;stroke-linecap:round;stroke-linejoin:round;stroke-width: 71 } 
-		.outline { fill: none;stroke-linecap:round;stroke-linejoin:round;stroke-width: 8 }
 		`}
     </style>
     <path
       style={{
-        fill: props.fillingColor,
+        fill: fillingColor,
       }}
       id="filling"
       className="filling"
@@ -31,7 +42,8 @@ export const RollCakeIcon = (props: Props) => (
     />
     <path
       style={{
-        stroke: props.cakeColor,
+        stroke: cakeColor,
+        strokeWidth: cakeWidth,
       }}
       id="cake"
       className="cake"
@@ -39,7 +51,8 @@ export const RollCakeIcon = (props: Props) => (
     />
     <path
       style={{
-        stroke: props.outlineColor,
+        stroke: outlineColor,
+        strokeWidth: outlineWidth,
       }}
       id="outline"
       className="outline"
