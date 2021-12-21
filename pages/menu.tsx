@@ -111,7 +111,14 @@ const Menu = () => (
             <Link href="/menu/pound-cake">
               <a>
                 <MenuItem title="Pound Cake">
-                  <PoundCakeIcon />
+                  <PoundCakeIcon
+                    cakeColor="#8ead61"
+                    cakeOutlineColor="#657e42"
+                    glazeColor="#657e42"
+                    glazeOutlineColor="#506534"
+                    decorationColor="#fcebae"
+                    decorationOutlineColor="#e5cf81"
+                  />
                 </MenuItem>
               </a>
             </Link>

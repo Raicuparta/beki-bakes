@@ -76,8 +76,47 @@ const Menu = () => (
             <Typography>Half-size roll: 10.5 x 9 x 7 cm</Typography>
           </Box>
           <Stack spacing={6}>
-            <MenuItem title="Pound Cake" description="yes it's true" price={10}>
-              <PoundCakeIcon />
+            <MenuItem
+              title="Matcha Pound Cake"
+              description="yes it's true"
+              price={10}
+            >
+              <PoundCakeIcon
+                cakeColor="#8ead61"
+                cakeOutlineColor="#657e42"
+                glazeColor="#657e42"
+                glazeOutlineColor="#506534"
+                decorationColor="#fcebae"
+                decorationOutlineColor="#e5cf81"
+              />
+            </MenuItem>
+            <MenuItem
+              title="Lemon Pound Cake"
+              description="yes it's lemon"
+              price={10}
+            >
+              <PoundCakeIcon
+                cakeColor="#f1dd6e"
+                cakeOutlineColor="#caa350"
+                glazeColor="#ffffff"
+                glazeOutlineColor="#d4b87a"
+                decorationColor="#ffffff"
+                decorationOutlineColor="#d4b87a"
+              />
+            </MenuItem>
+            <MenuItem
+              title="Red Velvet Pound Cake"
+              description="yes it's red velvet"
+              price={10}
+            >
+              <PoundCakeIcon
+                cakeColor="#cc3153"
+                cakeOutlineColor="#9c243e"
+                glazeColor="#ffffff"
+                glazeOutlineColor="#dddab9"
+                decorationColor="#ffffff"
+                decorationOutlineColor="#cc3153"
+              />
             </MenuItem>
           </Stack>
         </Box>
