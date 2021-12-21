@@ -2,35 +2,10 @@ import Head from "next/head";
 import React from "react";
 import { Box, Stack, Button, Typography } from "@mui/material";
 import Image from "next/image";
-import { RollCakeIcon, CookieIcon, PoundCakeIcon } from "../components/icons";
-import { MenuItem } from "../components/MenuItem";
-import Link from "next/link";
+import { PoundCakeIcon } from "../../components/icons";
+import { MenuItem } from "../../components/MenuItem";
 
 const snailSize = 70;
-
-const MatchaRollIcon = () => (
-  <RollCakeIcon
-    outlineColor="#677d2b"
-    cakeColor="#a5ad55"
-    fillingColor="#a44b3c"
-  />
-);
-
-const ChocolateRollIcon = () => (
-  <RollCakeIcon
-    outlineColor="#251d17"
-    cakeColor="#4c392b"
-    fillingColor="#a58a71"
-  />
-);
-
-const VanillaRollIcon = () => (
-  <RollCakeIcon
-    outlineColor="#b8954a"
-    cakeColor="#ebd691"
-    fillingColor="#d09e6f"
-  />
-);
 
 const Menu = () => (
   <>
@@ -101,20 +76,9 @@ const Menu = () => (
             <Typography>Half-size roll: 10.5 x 9 x 7 cm</Typography>
           </Box>
           <Stack spacing={6}>
-            <Link href="/menu/roll-cake">
-              <a>
-                <MenuItem title="Roll Cake">
-                  <MatchaRollIcon />
-                </MenuItem>
-              </a>
-            </Link>
-            <Link href="/menu/pound-cake">
-              <a>
-                <MenuItem title="Pound Cake">
-                  <PoundCakeIcon />
-                </MenuItem>
-              </a>
-            </Link>
+            <MenuItem title="Pound Cake" description="yes it's true" price={10}>
+              <PoundCakeIcon />
+            </MenuItem>
           </Stack>
         </Box>
       </Stack>
