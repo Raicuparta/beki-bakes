@@ -54,9 +54,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           backgroundImage: "url(/transparent-snail.png)",
           backgroundSize: "100px",
           bgcolor: "#ecf4ff",
-          // TODO: rotate background in source image.
-          // transformOrigin: "center",
-          // transform: "rotate(45deg)",
+          overflowY: "scroll",
         }}
       />
       <CssBaseline />

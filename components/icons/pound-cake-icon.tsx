@@ -1,4 +1,3 @@
-const size = 60;
 const outlineWidth = 40;
 
 type Props = {
@@ -8,6 +7,7 @@ type Props = {
   glazeOutlineColor: string;
   decorationColor: string;
   decorationOutlineColor: string;
+  size?: number;
 };
 
 export const PoundCakeIcon = ({
@@ -17,6 +17,7 @@ export const PoundCakeIcon = ({
   glazeOutlineColor,
   decorationColor,
   decorationOutlineColor,
+  size = 60,
 }: Props) => (
   <svg
     version="1.2"
@@ -30,6 +31,7 @@ export const PoundCakeIcon = ({
       strokeLinecap: "round",
       paintOrder: "stroke fill markers",
     }}
+    display="block"
   >
     <path
       id="body"

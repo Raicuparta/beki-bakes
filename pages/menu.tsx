@@ -8,29 +8,7 @@ import Link from "next/link";
 
 const snailSize = 70;
 
-const MatchaRollIcon = () => (
-  <RollCakeIcon
-    outlineColor="#677d2b"
-    cakeColor="#a5ad55"
-    fillingColor="#a44b3c"
-  />
-);
-
-const ChocolateRollIcon = () => (
-  <RollCakeIcon
-    outlineColor="#251d17"
-    cakeColor="#4c392b"
-    fillingColor="#a58a71"
-  />
-);
-
-const VanillaRollIcon = () => (
-  <RollCakeIcon
-    outlineColor="#b8954a"
-    cakeColor="#ebd691"
-    fillingColor="#d09e6f"
-  />
-);
+export type SpecificIconProps = { size?: number };
 
 const Menu = () => (
   <>

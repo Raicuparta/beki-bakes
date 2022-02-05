@@ -2,9 +2,9 @@ type Props = {
   outlineColor: string;
   cakeColor: string;
   fillingColor: string;
+  size?: number;
 };
 
-const size = 60;
 const outlineWidth = 20;
 const cakeWidth = 71;
 
@@ -12,6 +12,7 @@ export const RollCakeIcon = ({
   outlineColor,
   cakeColor,
   fillingColor,
+  size = 60,
 }: Props) => (
   <svg
     version="1.2"
@@ -20,6 +21,7 @@ export const RollCakeIcon = ({
     viewBox="0 0 534 534"
     width={size}
     height={size}
+    display="block"
     style={{
       fill: "none",
       strokeLinecap: "round",

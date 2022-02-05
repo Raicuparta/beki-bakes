@@ -9,6 +9,7 @@ export const CookieIcon = () => (
     viewBox="0 0 1024 1024"
     width={60}
     height={size}
+    display="block"
   >
     <title>cookie-icon</title>
     <defs>
