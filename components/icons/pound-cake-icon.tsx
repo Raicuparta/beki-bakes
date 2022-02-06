@@ -1,4 +1,4 @@
-const outlineWidth = 40;
+const outlineWidth = 30;
 
 type Props = {
   cakeColor: string;
