@@ -20,7 +20,6 @@ const Home = () => (
     </Head>
     <main>
       <PageContainer>
-        <BreadcrumbsList items={[{ title: "Menu" }]} />
         {/* <Grid container spacing={2} sx={{ mb: 2 }}>
           {Object.values(products).map(({ id, name }) => (
             <ListedProduct
@@ -32,7 +31,7 @@ const Home = () => (
             />
           ))}
         </Grid> */}
-        <Stack spacing={3} sx={{ maxWidth: 350, margin: "auto" }}>
+        <Stack spacing={2} sx={{ maxWidth: 350, margin: "auto" }}>
           <MenuButton href="/menu/roll-cake" name="Roll cake">
             <MatchaRollIcon size={80} />
           </MenuButton>
