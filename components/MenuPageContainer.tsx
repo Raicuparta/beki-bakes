@@ -1,4 +1,3 @@
-import Head from "next/head";
 import NextLink from "next/link";
 import React from "react";
 import { Box, Stack, Button, Typography } from "@mui/material";
@@ -26,6 +25,9 @@ export const MenuPageContainer = ({ children, footer }: Props) => (
           height: 960,
           margin: "auto",
           mt: 2,
+          borderRadius: (theme) => theme.shape.borderRadius,
+          overflow: "hidden",
+          boxShadow: (theme) => theme.shadows[2],
         }}
       >
         <Stack
