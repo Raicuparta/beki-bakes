@@ -1,6 +1,6 @@
 import Head from "next/head";
 import React from "react";
-import { Stack } from "@mui/material";
+import { Stack, Typography } from "@mui/material";
 import { RollCakeIcon, CookieIcon } from "../../components/icons";
 import { MenuItem } from "../../components/MenuItem";
 import { SpecificIconProps } from "../menu";
@@ -38,7 +38,14 @@ const Menu = () => (
     <Head>
       <title>bekibakes</title>
     </Head>
-    <MenuPageContainer>
+    <MenuPageContainer
+      footer={
+        <>
+          <Typography>Full-size roll: 21 x 9 x 7 cm</Typography>
+          <Typography>Half-size roll: 10.5 x 9 x 7 cm</Typography>
+        </>
+      }
+    >
       <MenuItem
         title="Matcha Azuki Roll"
         description="Matcha chiffon cake with fresh whipped cream and azuki paste"

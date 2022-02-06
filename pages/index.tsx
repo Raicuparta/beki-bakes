@@ -32,6 +32,9 @@ const Home = () => (
           ))}
         </Grid> */}
         <Stack spacing={2} sx={{ maxWidth: 350, margin: "auto" }}>
+          <Typography color="primary" align="center" variant="h3">
+            Menus
+          </Typography>
           <MenuButton href="/menu/roll-cake" name="Roll cake">
             <MatchaRollIcon size={80} />
           </MenuButton>

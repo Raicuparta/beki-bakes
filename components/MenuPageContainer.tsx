@@ -9,9 +9,10 @@ const snailSize = 70;
 
 type Props = {
   children: React.ReactNode;
+  footer?: React.ReactNode;
 };
 
-export const MenuPageContainer = ({ children }: Props) => (
+export const MenuPageContainer = ({ children, footer }: Props) => (
   <main>
     <PageContainer>
       <NextLink passHref href="/">
@@ -72,16 +73,17 @@ export const MenuPageContainer = ({ children }: Props) => (
               priority
             />
           </Box>
-          <Box
-            sx={{
-              position: "absolute",
-              left: (theme) => theme.spacing(2),
-              bottom: (theme) => theme.spacing(2),
-            }}
-          >
-            <Typography>Full-size roll: 21 x 9 x 7 cm</Typography>
-            <Typography>Half-size roll: 10.5 x 9 x 7 cm</Typography>
-          </Box>
+          {footer && (
+            <Box
+              sx={{
+                position: "absolute",
+                left: (theme) => theme.spacing(2),
+                bottom: (theme) => theme.spacing(2),
+              }}
+            >
+              {footer}
+            </Box>
+          )}
           <Stack spacing={6}>{children}</Stack>
         </Box>
       </Stack>

@@ -16,7 +16,7 @@ const Menu = () => (
     <Head>
       <title>bekibakes</title>
     </Head>
-    <MenuPageContainer>
+    <MenuPageContainer footer="I'm so alone">
       <MenuItem title="Tart" description="Tart tart" price={20}>
         <TartIcon />
       </MenuItem>
