@@ -1,5 +1,3 @@
-import { sizeHeight } from ".pnpm/@mui+system@5.4.0_ef966af889ffc4849e7222692314a033/node_modules/@mui/system";
-
 type Props = {
   size?: number;
 };
