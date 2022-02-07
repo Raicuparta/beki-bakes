@@ -56,8 +56,8 @@ const PyramidIcon = ({ size = 60, bodyColor, bodyOutlineColor }: Props) => (
     <path id="Layer 1" className="pyramid-s0" d="" />
     <path
       style={{
-        fill: "#db9d4c",
-        stroke: "#bd863e",
+        fill: iconColors.cookie,
+        stroke: iconColors.cookieOutline,
         strokeLinecap: "round",
         strokeLinejoin: "round",
         strokeWidth: 50,

@@ -1,3 +1,5 @@
+import { iconColors } from "./icon-color";
+
 type Props = {
   size?: number;
 };
@@ -13,7 +15,7 @@ export const TartIcon = ({ size = 60 }: Props) => (
     <title>tart-icon</title>
     <style>
       {`
-		.tart-s0 { fill: #e6ac60;stroke: #ac7c3e;stroke-width: 50 } 
+		.tart-s0 { fill: ${iconColors.cookie};stroke: ${iconColors.cookieOutline};stroke-width: 50 } 
 		.tart-s1 { fill: #19270d;stroke: #364427;stroke-width: 50 } 
 		.tart-s2 { opacity: .8;fill: #ceac2a } 
 		.tart-s3 { opacity: .8;fill: #f0c933 } 

@@ -1,3 +1,5 @@
+import { iconColors } from "./icon-color";
+
 const size = 50;
 const lineWidth = 60;
 
@@ -13,8 +15,8 @@ export const CookieIcon = () => (
   >
     <path
       style={{
-        fill: "#bd8e44",
-        stroke: "#7e571c",
+        fill: iconColors.cookie,
+        stroke: iconColors.cookieOutline,
         strokeLinecap: "round",
         strokeLinejoin: "round",
         strokeWidth: lineWidth,
