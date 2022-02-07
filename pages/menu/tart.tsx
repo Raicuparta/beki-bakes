@@ -1,6 +1,10 @@
 import Head from "next/head";
 import React from "react";
-import { SpecificIconProps, TartIcon } from "../../components/icons";
+import {
+  MatchaPyramidIcon,
+  SpecificIconProps,
+  TartIcon,
+} from "../../components/icons";
 import { MenuItem } from "../../components/MenuItem";
 import { MenuPageContainer } from "../../components/MenuPageContainer";
 
@@ -16,8 +20,19 @@ const Menu = () => (
       <title>bekibakes</title>
     </Head>
     <MenuPageContainer footer="I'm so alone">
-      <MenuItem title="Tart" description="Tart tart" price={20}>
-        <TartIcon />
+      <MenuItem
+        title="Matcha tart"
+        description="It's a tart and it's made of matcha."
+        price={20}
+      >
+        <MatchaTartIcon />
+      </MenuItem>
+      <MenuItem
+        title="Fuji Tart"
+        description="It's a tart and it's made of Fuji."
+        price={20}
+      >
+        <MatchaPyramidIcon />
       </MenuItem>
     </MenuPageContainer>
   </>

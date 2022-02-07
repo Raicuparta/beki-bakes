@@ -9,7 +9,11 @@ import { productPhotos } from "../components/productPhotos";
 import { BreadcrumbsList } from "../components/BreadcrumbsList";
 import { ChocolateRollIcon, MatchaRollIcon } from "./menu/roll-cake";
 import { MenuButton } from "../components/MenuButton";
-import { PoundCakeIcon } from "../components/icons";
+import {
+  MatchaPyramidIcon,
+  PoundCakeIcon,
+  PyramidIcon,
+} from "../components/icons";
 import { MatchaPoundCakeIcon } from "./menu/pound-cake";
 import { MatchaTartIcon } from "./menu/tart";
 
@@ -41,7 +45,7 @@ const Home = () => (
           <MenuButton href="/menu/pound-cake" name="Pound cake">
             <MatchaPoundCakeIcon size={80} />
           </MenuButton>
-          <MenuButton href="/menu/tart" name="Tart">
+          <MenuButton href="/menu/tart" name="Tarts">
             <MatchaTartIcon size={80} />
           </MenuButton>
         </Stack>
