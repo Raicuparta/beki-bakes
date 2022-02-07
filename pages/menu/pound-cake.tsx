@@ -1,8 +1,7 @@
 import Head from "next/head";
 import React from "react";
-import { PoundCakeIcon } from "../../components/icons";
+import { PoundCakeIcon, SpecificIconProps } from "../../components/icons";
 import { MenuItem } from "../../components/MenuItem";
-import { SpecificIconProps } from "../menu";
 import { MenuPageContainer } from "../../components/MenuPageContainer";
 
 export const MatchaPoundCakeIcon = ({ size }: SpecificIconProps) => (

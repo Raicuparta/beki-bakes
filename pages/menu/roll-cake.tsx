@@ -1,9 +1,12 @@
 import Head from "next/head";
 import React from "react";
 import { Stack, Typography } from "@mui/material";
-import { RollCakeIcon, CookieIcon } from "../../components/icons";
+import {
+  RollCakeIcon,
+  CookieIcon,
+  SpecificIconProps,
+} from "../../components/icons";
 import { MenuItem } from "../../components/MenuItem";
-import { SpecificIconProps } from "../menu";
 import { MenuPageContainer } from "../../components/MenuPageContainer";
 
 export const MatchaRollIcon = ({ size }: SpecificIconProps) => (

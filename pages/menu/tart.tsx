@@ -1,8 +1,7 @@
 import Head from "next/head";
 import React from "react";
-import { TartIcon } from "../../components/icons";
+import { SpecificIconProps, TartIcon } from "../../components/icons";
 import { MenuItem } from "../../components/MenuItem";
-import { SpecificIconProps } from "../menu";
 import { MenuPageContainer } from "../../components/MenuPageContainer";
 
 const snailSize = 70;
