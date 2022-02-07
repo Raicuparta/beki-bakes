@@ -13,8 +13,8 @@ export const TartIcon = ({ size = 60 }: Props) => (
     <title>tart-icon</title>
     <style>
       {`
-		.s0 { fill: #db9d4c;stroke: #bd863e;stroke-width: 100 } 
-		.s1 { fill: #222e17;stroke: #2e3b20;stroke-width: 80 } 
+		.s0 { fill: #e6ac60;stroke: #ac7c3e;stroke-width: 50 } 
+		.s1 { fill: #19270d;stroke: #364427;stroke-width: 50 } 
 		.s2 { opacity: .8;fill: #ceac2a } 
 		.s3 { opacity: .8;fill: #f0c933 } 
   `}
@@ -27,7 +27,7 @@ export const TartIcon = ({ size = 60 }: Props) => (
     <path
       id="filling"
       className="s1"
-      d="m511.8 927.3c-229.7 0-415.5-185.7-415.5-415.5c0-229.7 185.8-415.5 415.5-415.5c229.8 0 415.5 185.8 415.5 415.5c0 229.8-185.7 415.5-415.5 415.5z"
+      d="m511.8 898.8c-214 0-387-173-387-387c0-214 173-387 387-387c214 0 387 173 387 387c0 214-173 387-387 387z"
     />
     <g id="goldleaf">
       <path
