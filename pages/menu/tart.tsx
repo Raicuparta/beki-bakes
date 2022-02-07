@@ -2,6 +2,7 @@ import Head from "next/head";
 import React from "react";
 import {
   MatchaPyramidIcon,
+  RubyPyramidIcon,
   SpecificIconProps,
   TartIcon,
 } from "../../components/icons";
@@ -28,11 +29,18 @@ const Menu = () => (
         <MatchaTartIcon />
       </MenuItem>
       <MenuItem
-        title="Fuji Tart"
-        description="It's a tart and it's made of Fuji."
+        title="Matcha Fuji Tart"
+        description="It's a mountain and it's made of matcha."
         price={20}
       >
         <MatchaPyramidIcon />
+      </MenuItem>
+      <MenuItem
+        title="Ruby Fuji Tart"
+        description="It's a mountain and it's made of ruby ruby ruby ruby."
+        price={20}
+      >
+        <RubyPyramidIcon />
       </MenuItem>
     </MenuPageContainer>
   </>
