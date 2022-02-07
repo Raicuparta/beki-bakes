@@ -1,4 +1,5 @@
 import { SpecificIconProps } from ".";
+import { iconColors } from "./icon-color";
 
 interface Props extends SpecificIconProps {
   outlineColor: string;
@@ -11,8 +12,8 @@ const cakeWidth = 71;
 
 export const MatchaRollIcon = ({ size }: SpecificIconProps) => (
   <RollCakeIcon
-    outlineColor="#677d2b"
-    cakeColor="#a5ad55"
+    outlineColor={iconColors.matchaCakeOutline}
+    cakeColor={iconColors.matchaCake}
     fillingColor="#a44b3c"
     size={size}
   />

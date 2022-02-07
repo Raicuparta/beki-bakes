@@ -1,4 +1,5 @@
 import { SpecificIconProps } from ".";
+import { iconColors } from "./icon-color";
 
 const outlineWidth = 30;
 
@@ -13,10 +14,10 @@ interface Props extends SpecificIconProps {
 
 export const MatchaPoundCakeIcon = ({ size }: SpecificIconProps) => (
   <PoundCakeIcon
-    cakeColor="#8ead61"
-    cakeOutlineColor="#657e42"
-    glazeColor="#657e42"
-    glazeOutlineColor="#506534"
+    cakeColor={iconColors.matchaCake}
+    cakeOutlineColor={iconColors.matchaCakeOutline}
+    glazeColor={iconColors.matchaGlaze}
+    glazeOutlineColor={iconColors.matchaGlazeOutline}
     decorationColor="#fcebae"
     decorationOutlineColor="#e5cf81"
     size={size}

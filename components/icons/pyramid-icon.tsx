@@ -1,4 +1,5 @@
 import { SpecificIconProps } from ".";
+import { iconColors } from "./icon-color";
 
 interface Props extends SpecificIconProps {
   bodyColor: string;
@@ -6,7 +7,11 @@ interface Props extends SpecificIconProps {
 }
 
 export const MatchaPyramidIcon = ({ size }: SpecificIconProps) => (
-  <PyramidIcon size={size} bodyColor="#839847" bodyOutlineColor="#526127" />
+  <PyramidIcon
+    size={size}
+    bodyColor={iconColors.matchaGlaze}
+    bodyOutlineColor={iconColors.matchaGlazeOutline}
+  />
 );
 export const RubyPyramidIcon = ({ size }: SpecificIconProps) => (
   <PyramidIcon size={size} bodyColor="#ac6857" bodyOutlineColor="#8b4533" />
