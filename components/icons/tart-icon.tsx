@@ -6,31 +6,40 @@ export const TartIcon = ({ size = 60 }: Props) => (
   <svg
     version="1.2"
     xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 1024 1024"
+    viewBox="-30 -30 1084 1084"
     width={size}
     height={size}
   >
+    <title>tart-icon</title>
+    <style>
+      {`
+		.s0 { fill: #db9d4c;stroke: #bd863e;stroke-width: 100 } 
+		.s1 { fill: #222e17;stroke: #2e3b20;stroke-width: 80 } 
+		.s2 { opacity: .8;fill: #ceac2a } 
+		.s3 { opacity: .8;fill: #f0c933 } 
+  `}
+    </style>
     <path
-      style={{ fill: "#ba8642", stroke: "#ba8642", strokeWidth: 50 }}
-      id="Shape 1 copy 2"
-      d="m513 978.6c-264.9 0-479-195.4-479-437c0-241.7 214.1-437 479-437c264.9 0 479 195.3 479 437c0 241.6-214.1 437-479 437z"
-    />
-    <path
-      style={{ fill: "#222e17", stroke: "#2e3b20", strokeWidth: 50 }}
-      d="m514.2 820.7c-213.2 0-385.5-157.2-385.5-351.7c0-194.5 172.3-351.7 385.5-351.7c213.1 0 385.4 157.2 385.4 351.7c0 194.5-172.3 351.7-385.4 351.7z"
-    />
-    <path
-      style={{ fill: "none", stroke: "#db9d4c", strokeWidth: 60 }}
+      id="shell"
       className="s0"
-      d="m513 885.8c-252.7 0-456.9-186.3-456.9-416.8c0-230.5 204.2-416.9 456.9-416.9c252.7 0 456.9 186.4 456.9 416.9c0 230.5-204.2 416.8-456.9 416.8z"
+      d="m512 995.6c-267.5 0-483.7-216.2-483.7-483.6c0-267.5 216.2-483.7 483.7-483.7c267.4 0 483.6 216.2 483.6 483.7c0 267.4-216.2 483.6-483.6 483.6z"
     />
     <path
-      style={{ fill: "#ceac2a", opacity: 0.8 }}
-      d="m423.1 450.2l100.3-91l67.9 74l-100.2 90.9z"
+      id="filling"
+      className="s1"
+      d="m511.8 927.3c-229.7 0-415.5-185.7-415.5-415.5c0-229.7 185.8-415.5 415.5-415.5c229.8 0 415.5 185.8 415.5 415.5c0 229.8-185.7 415.5-415.5 415.5z"
     />
-    <path
-      style={{ fill: "#f0c933", opacity: 0.8 }}
-      d="m430.6 399.8l134.4-15.9l12.4 99.6l-134.4 16z"
-    />
+    <g id="goldleaf">
+      <path
+        id="goldleaf-bottom"
+        className="s2"
+        d="m428.1 521.2l100.3-91l67.9 74l-100.2 90.9z"
+      />
+      <path
+        id="goldleaf-top"
+        className="s3"
+        d="m435.6 470.8l134.4-15.9l12.4 99.6l-134.4 16z"
+      />
+    </g>
   </svg>
 );
