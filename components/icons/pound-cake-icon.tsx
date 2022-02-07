@@ -1,16 +1,53 @@
+import { SpecificIconProps } from ".";
+
 const outlineWidth = 30;
 
-type Props = {
+interface Props extends SpecificIconProps {
   cakeColor: string;
   cakeOutlineColor: string;
   glazeColor: string;
   glazeOutlineColor: string;
   decorationColor: string;
   decorationOutlineColor: string;
-  size?: number;
-};
+}
 
-export const PoundCakeIcon = ({
+export const MatchaPoundCakeIcon = ({ size }: SpecificIconProps) => (
+  <PoundCakeIcon
+    cakeColor="#8ead61"
+    cakeOutlineColor="#657e42"
+    glazeColor="#657e42"
+    glazeOutlineColor="#506534"
+    decorationColor="#fcebae"
+    decorationOutlineColor="#e5cf81"
+    size={size}
+  />
+);
+
+export const LemonPoundCakeIcon = ({ size }: SpecificIconProps) => (
+  <PoundCakeIcon
+    cakeColor="#f1dd6e"
+    cakeOutlineColor="#caa350"
+    glazeColor="#ffffff"
+    glazeOutlineColor="#d4b87a"
+    decorationColor="#ffffff"
+    decorationOutlineColor="#d4b87a"
+    size={size}
+  />
+);
+
+export const RedVelvetPoundCakeIcon = ({ size }: SpecificIconProps) => (
+  <PoundCakeIcon
+    cakeColor="#cc3153"
+    cakeOutlineColor="#9c243e"
+    glazeColor="#ffffff"
+    glazeOutlineColor="#dddab9"
+    decorationColor="#ffffff"
+    decorationOutlineColor="#cc3153"
+    size={size}
+  />
+);
+
+const PoundCakeIcon = ({
   cakeColor,
   cakeOutlineColor,
   glazeColor,

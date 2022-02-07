@@ -2,39 +2,13 @@ import Head from "next/head";
 import React from "react";
 import { Stack, Typography } from "@mui/material";
 import {
-  RollCakeIcon,
+  ChocolateRollIcon,
   CookieIcon,
-  SpecificIconProps,
+  MatchaRollIcon,
+  VanillaRollIcon,
 } from "../../components/icons";
 import { MenuItem } from "../../components/MenuItem";
 import { MenuPageContainer } from "../../components/MenuPageContainer";
-
-export const MatchaRollIcon = ({ size }: SpecificIconProps) => (
-  <RollCakeIcon
-    outlineColor="#677d2b"
-    cakeColor="#a5ad55"
-    fillingColor="#a44b3c"
-    size={size}
-  />
-);
-
-export const ChocolateRollIcon = ({ size }: SpecificIconProps) => (
-  <RollCakeIcon
-    outlineColor="#251d17"
-    cakeColor="#4c392b"
-    fillingColor="#a58a71"
-    size={size}
-  />
-);
-
-export const VanillaRollIcon = ({ size }: SpecificIconProps) => (
-  <RollCakeIcon
-    outlineColor="#b8954a"
-    cakeColor="#ebd691"
-    fillingColor="#d09e6f"
-    size={size}
-  />
-);
 
 const Menu = () => (
   <>

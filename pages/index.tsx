@@ -1,20 +1,10 @@
 import Head from "next/head";
 import React from "react";
-import { Box, Grid, SliderTrack, Stack, Typography } from "@mui/material";
+import { Stack, Typography } from "@mui/material";
 
-import { products } from "../components";
-import { ListedProduct } from "../components/ListedProduct";
 import { PageContainer } from "../components/PageContainer";
-import { productPhotos } from "../components/productPhotos";
-import { BreadcrumbsList } from "../components/BreadcrumbsList";
-import { ChocolateRollIcon, MatchaRollIcon } from "./menu/roll-cake";
 import { MenuButton } from "../components/MenuButton";
-import {
-  MatchaPyramidIcon,
-  PoundCakeIcon,
-  PyramidIcon,
-} from "../components/icons";
-import { MatchaPoundCakeIcon } from "./menu/pound-cake";
+import { MatchaPoundCakeIcon, MatchaRollIcon } from "../components/icons";
 import { MatchaTartIcon } from "./menu/tart";
 
 const Home = () => (
@@ -24,17 +14,6 @@ const Home = () => (
     </Head>
     <main>
       <PageContainer>
-        {/* <Grid container spacing={2} sx={{ mb: 2 }}>
-          {Object.values(products).map(({ id, name }) => (
-            <ListedProduct
-              key={id}
-              href={`/${id}`}
-              name={name}
-              image={productPhotos[id]["main"]}
-              price={0}
-            />
-          ))}
-        </Grid> */}
         <Stack spacing={2} sx={{ maxWidth: 350, margin: "auto" }}>
           <Typography color="primary" align="center" variant="h3">
             Menus

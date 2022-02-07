@@ -1,14 +1,42 @@
-type Props = {
+import { SpecificIconProps } from ".";
+
+interface Props extends SpecificIconProps {
   outlineColor: string;
   cakeColor: string;
   fillingColor: string;
-  size?: number;
-};
+}
 
 const outlineWidth = 20;
 const cakeWidth = 71;
 
-export const RollCakeIcon = ({
+export const MatchaRollIcon = ({ size }: SpecificIconProps) => (
+  <RollCakeIcon
+    outlineColor="#677d2b"
+    cakeColor="#a5ad55"
+    fillingColor="#a44b3c"
+    size={size}
+  />
+);
+
+export const ChocolateRollIcon = ({ size }: SpecificIconProps) => (
+  <RollCakeIcon
+    outlineColor="#251d17"
+    cakeColor="#4c392b"
+    fillingColor="#a58a71"
+    size={size}
+  />
+);
+
+export const VanillaRollIcon = ({ size }: SpecificIconProps) => (
+  <RollCakeIcon
+    outlineColor="#b8954a"
+    cakeColor="#ebd691"
+    fillingColor="#d09e6f"
+    size={size}
+  />
+);
+
+const RollCakeIcon = ({
   outlineColor,
   cakeColor,
   fillingColor,
