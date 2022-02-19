@@ -37,7 +37,7 @@ const Menu = () => (
         <RedVelvetPoundCakeIcon />
       </MenuItem>
       <MenuItem
-        title="Red Velvet Pound Cake"
+        title="Sesame Loaf Cake"
         description="yes it's red velvet"
         price={10}
       >
