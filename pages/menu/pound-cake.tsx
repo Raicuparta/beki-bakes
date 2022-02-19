@@ -4,6 +4,7 @@ import {
   LemonPoundCakeIcon,
   MatchaPoundCakeIcon,
   RedVelvetPoundCakeIcon,
+  SesamePoundCakeIcon,
 } from "../../components/icons";
 import { MenuItem } from "../../components/MenuItem";
 import { MenuPageContainer } from "../../components/MenuPageContainer";
@@ -34,6 +35,13 @@ const Menu = () => (
         price={10}
       >
         <RedVelvetPoundCakeIcon />
+      </MenuItem>
+      <MenuItem
+        title="Red Velvet Pound Cake"
+        description="yes it's red velvet"
+        price={10}
+      >
+        <SesamePoundCakeIcon />
       </MenuItem>
     </MenuPageContainer>
   </>
