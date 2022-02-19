@@ -16,6 +16,7 @@ const Menu = () => (
       <title>bekibakes</title>
     </Head>
     <MenuPageContainer
+      title="pound cake"
       footer={
         <>
           <Typography>Pound Cube: 5 x 5 x 5 cm</Typography>
@@ -38,14 +39,14 @@ const Menu = () => (
         <LemonPoundCakeIcon />
       </MenuItem>
       <MenuItem
-        title="Red Velvet Pound Cake"
+        title="Red Velvet Cube Pound Cake"
         description="6 pieces of Red Velvet pound cakes topped with whipped cream cheese frosting"
         price="15"
       >
         <RedVelvetPoundCakeIcon />
       </MenuItem>
       <MenuItem
-        title="Miso Caramel Black Sesame Loaf Cake"
+        title="Miso Caramel Black Sesame Loaf"
         description="Black Sesame flavoured pound cake with Miso flavour caramel cream topping
         "
         price="15"

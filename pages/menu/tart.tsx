@@ -20,23 +20,25 @@ const Menu = () => (
     <Head>
       <title>bekibakes</title>
     </Head>
-    <MenuPageContainer>
+    <MenuPageContainer
+      title="tart"
+    >
       <MenuItem
-        title="Matcha Ganache Tart"
+        title="Matcha Ganache"
         description="Pate Sablee crust filled with Matcha white chocolate ganache and matcha glaze"
         price="12"
       >
         <MatchaTartIcon />
       </MenuItem>
       <MenuItem
-        title="Fuji Matcha Strawverry Mousse Tart"
-        description="Pable sablee, almond cream, Matcha namelaka and strawberry yogurt mousse"
+        title="Matcha Fuji Strawberry Mousse"
+        description="Pate sablee, almond cream, Matcha namelaka and strawberry yogurt mousse"
         price="6"
       >
         <MatchaPyramidIcon />
       </MenuItem>
       <MenuItem
-        title="Ruby Fuji Tart"
+        title="Ruby Fuji Yuzu Mousse"
         description="Pate sablee, almond cream, Ruby chocolate namelaka and yuzu mousse."
         price="6.50"
       >

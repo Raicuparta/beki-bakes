@@ -16,6 +16,7 @@ const Menu = () => (
       <title>bekibakes</title>
     </Head>
     <MenuPageContainer
+      title="roll cake"
       footer={
         <>
           <Typography>Full-size roll: 21 x 9 x 7 cm</Typography>
@@ -24,21 +25,21 @@ const Menu = () => (
       }
     >
       <MenuItem
-        title="Matcha Azuki Roll"
+        title="Matcha Azuki"
         description="Matcha chiffon cake with fresh whipped cream and azuki paste"
         price="20"
       >
         <MatchaRollIcon />
       </MenuItem>
       <MenuItem
-        title="Chocolate Chestnut Roll"
+        title="Chocolate Chestnut"
         description="Chocolate chiffon cake with fresh whipped cream and chestnut paste"
         price="20"
       >
         <ChocolateRollIcon />
       </MenuItem>
       <MenuItem
-        title="Vanilla Salted Caramel Roll"
+        title="Vanilla Salted Caramel"
         description="Vanilla chiffon cake with fresh whipped cream and salted caramel mousse"
         price="20"
       >

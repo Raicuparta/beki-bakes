@@ -21,7 +21,7 @@ const Home = () => (
           <MenuButton href="/menu/pound-cake" name="Pound cake">
             <MatchaPoundCakeIcon size={80} />
           </MenuButton>
-          <MenuButton href="/menu/tart" name="Tarts">
+          <MenuButton href="/menu/tart" name="Tart">
             <MatchaTartIcon size={80} />
           </MenuButton>
         </Stack>

@@ -9,9 +9,10 @@ const snailSize = 70;
 type Props = {
   children: React.ReactNode;
   footer?: React.ReactNode;
+  title: string;
 };
 
-export const MenuPageContainer = ({ children, footer }: Props) => (
+export const MenuPageContainer = ({ children, footer, title, }: Props) => (
   <main>
     <PageContainer>
       <NextLink passHref href="/">
@@ -46,7 +47,7 @@ export const MenuPageContainer = ({ children, footer }: Props) => (
               lineHeight: 1,
             }}
           >
-            menu
+            {title}
           </Typography>
         </Stack>
         <Box
