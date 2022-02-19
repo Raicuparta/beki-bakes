@@ -21,8 +21,6 @@ export const MenuPageContainer = ({ children, footer }: Props) => (
       </NextLink>
       <Stack
         sx={{
-          width: 540,
-          height: 960,
           margin: "auto",
           mt: 2,
           borderRadius: (theme) => theme.shape.borderRadius,
@@ -54,7 +52,9 @@ export const MenuPageContainer = ({ children, footer }: Props) => (
         <Box
           sx={{
             background: "white",
-            py: 5,
+            p: 2,
+            pt: 5,
+            pb: 14,
             color: "text.secondary",
             flex: 1,
             position: "relative",
