@@ -52,26 +52,17 @@ export const MenuPageContainer = ({ children, footer }: Props) => (
         <Box
           sx={{
             background: "white",
-            p: 2,
+            px: 2,
             pt: 5,
-            pb: 14,
             color: "text.secondary",
             flex: 1,
             position: "relative",
           }}
         >
-          {footer && (
-            <Box
-              sx={{
-                position: "absolute",
-                left: (theme) => theme.spacing(2),
-                bottom: (theme) => theme.spacing(2),
-              }}
-            >
-              {footer}
-            </Box>
-          )}
-          <Stack spacing={6}>{children}</Stack>
+          <Stack spacing={6} sx={{ mb: 5 }}>
+            {children}
+          </Stack>
+          {footer && <Box sx={{ mb: 2 }}>{footer}</Box>}
         </Box>
       </Stack>
     </PageContainer>

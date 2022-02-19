@@ -20,7 +20,7 @@ const Menu = () => (
     <Head>
       <title>bekibakes</title>
     </Head>
-    <MenuPageContainer footer="I'm so alone">
+    <MenuPageContainer>
       <MenuItem
         title="Matcha tart"
         description="It's a tart and it's made of matcha."
