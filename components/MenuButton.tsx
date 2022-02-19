@@ -1,13 +1,4 @@
-import {
-  Card,
-  CardActionArea,
-  CardContent,
-  Typography,
-  Grid,
-  Box,
-  Stack,
-} from "@mui/material";
-import Image from "next/image";
+import { Card, CardActionArea, Typography, Box, Stack } from "@mui/material";
 import Link from "next/link";
 
 type Props = {
