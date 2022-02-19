@@ -15,7 +15,9 @@ export const MenuItem = (props: Props) => (
         {props.title}
       </Typography>
       {props.description && (
-        <Typography fontSize={15}>{props.description}</Typography>
+        <Typography fontSize={15} align="center">
+          {props.description}
+        </Typography>
       )}
       {props.price && (
         <Typography fontSize={30} lineHeight={1}>
