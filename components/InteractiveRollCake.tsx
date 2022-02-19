@@ -85,33 +85,8 @@ export const InteractiveRollCake = () => {
   const selectedCake = cakeColorMap[cake];
 
   return (
-    <Box>
-      <Typography variant="h5" align="center">
-        <Box
-          component="span"
-          sx={{
-            borderBottom: 5,
-            borderBottomColor: selectedCake.cakeColor,
-            borderRadius: 1,
-            transition: "0.2s",
-          }}
-        >
-          {selectedCake.title}
-        </Box>{" "}
-        roll with{" "}
-        <Box
-          component="span"
-          sx={{
-            borderBottom: 5,
-            borderBottomColor: selectedFilling.color,
-            borderRadius: 1,
-            transition: "0.2s",
-          }}
-        >
-          {selectedFilling.title}
-        </Box>{" "}
-        filling
-      </Typography>
+    // TODO fix negative top margin
+    <Box sx={{ mt: -5 }}>
       <svg
         version="1.2"
         baseProfile="tiny-ps"
@@ -174,6 +149,35 @@ export const InteractiveRollCake = () => {
           d="M233 310.29C256.64 310.29 266.34 320.38 277.5 337.94C295.56 366.36 294.82 398.44 275.49 427.83C245.8 472.99 204.85 481.6 156 477.44C119 474.44 99 462.44 88 456.44C55.55 438.74 29.16 411.1 19 375.44C8.59 338.89 7.47 297.99 16 261.94C25.36 222.37 39.21 187.84 65 154.44C90.81 121.02 139.49 87.28 197 69.44C269.5 46.94 355.34 63.38 407 93.44C462 125.44 489 168.94 506.5 217.44C522.19 260.92 538 322.44 506.5 398.94C472.95 480.41 381.69 475.44 332.1 475.44C311.56 475.44 255.12 474.96 238 463.94"
         />
       </svg>
+      <Typography variant="h5" align="center" sx={{ mb: 2 }}>
+        <Box
+          component="span"
+          sx={{
+            borderBottom: 5,
+            borderBottomColor: selectedCake.cakeColor,
+            borderRadius: 1,
+            transition: "0.2s",
+          }}
+        >
+          {selectedCake.title}
+        </Box>{" "}
+        roll cake
+      </Typography>
+      <Typography variant="h5" align="center">
+        with{" "}
+        <Box
+          component="span"
+          sx={{
+            borderBottom: 5,
+            borderBottomColor: selectedFilling.color,
+            borderRadius: 1,
+            transition: "0.2s",
+          }}
+        >
+          {selectedFilling.title}
+        </Box>{" "}
+        filling
+      </Typography>
     </Box>
   );
 };
