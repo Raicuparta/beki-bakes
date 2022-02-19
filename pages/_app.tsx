@@ -53,7 +53,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           zIndex: -1,
           backgroundImage: "url(/transparent-snail.png)",
           backgroundSize: "80px",
-          bgcolor: "#ecf4ff",
+          bgcolor: "#ffffff",
           overflowY: "scroll",
         }}
       />
