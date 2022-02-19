@@ -3,7 +3,7 @@ import { Stack, Typography } from "@mui/material";
 type Props = {
   children: React.ReactNode;
   title: string;
-  price?: number;
+  price?: string;
   description?: string;
 };
 

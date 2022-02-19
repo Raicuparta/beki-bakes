@@ -22,23 +22,23 @@ const Menu = () => (
     </Head>
     <MenuPageContainer>
       <MenuItem
-        title="Matcha tart"
-        description="It's a tart and it's made of matcha."
-        price={20}
+        title="Matcha Ganache Tart"
+        description="Pate Sablee crust filled with Matcha white chocolate ganache and matcha glaze"
+        price="12"
       >
         <MatchaTartIcon />
       </MenuItem>
       <MenuItem
-        title="Matcha Fuji Tart"
-        description="It's a mountain and it's made of matcha."
-        price={20}
+        title="Fuji Matcha Strawverry Mousse Tart"
+        description="Pable sablee, almond cream, Matcha namelaka and strawberry yogurt mousse"
+        price="6"
       >
         <MatchaPyramidIcon />
       </MenuItem>
       <MenuItem
         title="Ruby Fuji Tart"
-        description="It's a mountain and it's made of ruby ruby ruby ruby."
-        price={20}
+        description="Pate sablee, almond cream, Ruby chocolate namelaka and yuzu mousse."
+        price="6.50"
       >
         <RubyPyramidIcon />
       </MenuItem>

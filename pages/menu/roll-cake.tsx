@@ -26,28 +26,28 @@ const Menu = () => (
       <MenuItem
         title="Matcha Azuki Roll"
         description="Matcha chiffon cake with fresh whipped cream and azuki paste"
-        price={20}
+        price="20"
       >
         <MatchaRollIcon />
       </MenuItem>
       <MenuItem
         title="Chocolate Chestnut Roll"
         description="Chocolate chiffon cake with fresh whipped cream and chestnut paste"
-        price={20}
+        price="20"
       >
         <ChocolateRollIcon />
       </MenuItem>
       <MenuItem
         title="Vanilla Salted Caramel Roll"
         description="Vanilla chiffon cake with fresh whipped cream and salted caramel mousse"
-        price={20}
+        price="20"
       >
         <VanillaRollIcon />
       </MenuItem>
       <MenuItem
         title="Assorted Box"
         description='3 half-size rolls of each flavour and 4 "Hup Toh Soh" Walnut cookies'
-        price={32}
+        price="32"
       >
         <Stack>
           <Stack direction="row" spacing={1} sx={{ alignItems: "center" }}>
