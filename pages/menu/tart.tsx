@@ -1,3 +1,4 @@
+import { Typography } from "@mui/material";
 import Head from "next/head";
 import React from "react";
 import {
@@ -22,6 +23,12 @@ const Menu = () => (
     </Head>
     <MenuPageContainer
       title="tart"
+      footer={
+        <>
+          <Typography> Round tart: ⌀ 16 cm </Typography>
+          <Typography> Fuji tart: 8 x 8 x 6 cm</Typography>
+        </>
+      }
     >
       <MenuItem
         title="Matcha Ganache"
@@ -39,7 +46,7 @@ const Menu = () => (
       </MenuItem>
       <MenuItem
         title="Ruby Fuji Yuzu Mousse"
-        description="Pate sablee, almond cream, Ruby chocolate namelaka and yuzu mousse."
+        description="Pate sablee, almond cream, Ruby chocolate namelaka and yuzu mousse"
         price="6.50"
       >
         <RubyPyramidIcon />
