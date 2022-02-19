@@ -25,21 +25,21 @@ const Menu = () => (
       }
     >
       <MenuItem
-        title="Matcha Cube Pound Cake"
+        title="Matcha"
         description="6 pieces of Matcha pound cakes topped with matcha white chocolate ganache"
         price="15"
       >
         <MatchaPoundCakeIcon />
       </MenuItem>
       <MenuItem
-        title="Lemon Cube Pound Cake"
+        title="Lemon Meringue"
         description="6 pieces of Lemon pound cakes topped with toasted Italian meringue "
         price="15"
       >
         <LemonPoundCakeIcon />
       </MenuItem>
       <MenuItem
-        title="Red Velvet Cube Pound Cake"
+        title="Red Velvet"
         description="6 pieces of Red Velvet pound cakes topped with whipped cream cheese frosting"
         price="15"
       >
