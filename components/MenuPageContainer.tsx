@@ -60,21 +60,6 @@ export const MenuPageContainer = ({ children, footer }: Props) => (
             position: "relative",
           }}
         >
-          <Box
-            sx={{
-              position: "absolute",
-              right: (theme) => theme.spacing(2),
-              bottom: (theme) => theme.spacing(2),
-            }}
-          >
-            <Image
-              src="/snail-halfwhite.svg"
-              alt="beki bakes"
-              width={snailSize}
-              height={snailSize}
-              priority
-            />
-          </Box>
           {footer && (
             <Box
               sx={{
