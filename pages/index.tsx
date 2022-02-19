@@ -1,6 +1,6 @@
 import Head from "next/head";
 import React from "react";
-import { Stack, Typography } from "@mui/material";
+import { Stack } from "@mui/material";
 
 import { PageContainer } from "../components/PageContainer";
 import { MenuButton } from "../components/MenuButton";
