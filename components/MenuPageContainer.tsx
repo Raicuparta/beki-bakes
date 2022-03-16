@@ -72,17 +72,14 @@ export const MenuPageContainer = ({ children, footer, title }: Props) => (
       sx={{
         position: "sticky",
         bottom: 0,
-        p: 2,
-        pb: 0,
+        p: 1,
         bgcolor: (theme) => theme.palette.background.paper,
       }}
     >
-      <PageContainer>
-        <Typography align="center" variant="h6">
-          Place your order
-        </Typography>
-        <SocialIcons horizontal />
-      </PageContainer>
+      <Typography align="center" variant="h6">
+        Place your order
+      </Typography>
+      <SocialIcons horizontal />
     </Box>
   </Box>
 );

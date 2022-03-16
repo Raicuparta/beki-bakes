@@ -13,7 +13,7 @@ export const SocialIcons = ({ horizontal = false }: Props) => (
       justifyContent: "center",
       height: "100%",
       position: horizontal ? undefined : "absolute",
-      right: (theme) => theme.spacing(2),
+      right: horizontal ? 0 : (theme) => theme.spacing(2),
       top: 0,
     }}
   >
@@ -27,7 +27,7 @@ export const SocialIcons = ({ horizontal = false }: Props) => (
         color="inherit"
         size={horizontal ? "medium" : "small"}
       >
-        <socialProfile.icon fontSize={horizontal ? "large" : "medium"} />
+        <socialProfile.icon />
       </IconButton>
     ))}
   </Stack>
