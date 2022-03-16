@@ -2,13 +2,17 @@ import { Stack, IconButton } from "@mui/material";
 import React from "react";
 import { socialProfiles } from "./socialProfiles";
 
-export const SocialIcons = () => (
+type Props = {
+  horizontal?: boolean;
+};
+
+export const SocialIcons = ({ horizontal = false }: Props) => (
   <Stack
-    direction="column"
+    direction={horizontal ? "row" : "column"}
     sx={{
       justifyContent: "center",
       height: "100%",
-      position: "absolute",
+      position: horizontal ? undefined : "absolute",
       right: (theme) => theme.spacing(2),
       top: 0,
     }}
@@ -21,9 +25,9 @@ export const SocialIcons = () => (
         target="_blank"
         rel="noopener noreferrer"
         color="inherit"
-        size="small"
+        size={horizontal ? "medium" : "small"}
       >
-        <socialProfile.icon />
+        <socialProfile.icon fontSize={horizontal ? "large" : "medium"} />
       </IconButton>
     ))}
   </Stack>

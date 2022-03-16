@@ -1,8 +1,9 @@
 import NextLink from "next/link";
 import React from "react";
-import { Box, Stack, Button, Typography } from "@mui/material";
+import { Box, Stack, Button, Typography, AppBar } from "@mui/material";
 import Image from "next/image";
 import { PageContainer } from "./PageContainer";
+import { SocialIcons } from ".";
 
 const snailSize = 70;
 
@@ -12,8 +13,8 @@ type Props = {
   title: string;
 };
 
-export const MenuPageContainer = ({ children, footer, title, }: Props) => (
-  <main>
+export const MenuPageContainer = ({ children, footer, title }: Props) => (
+  <Box component="main" sx={{ position: "relative" }}>
     <PageContainer>
       <NextLink passHref href="/">
         <Button size="small" variant="contained">
@@ -67,5 +68,21 @@ export const MenuPageContainer = ({ children, footer, title, }: Props) => (
         </Box>
       </Stack>
     </PageContainer>
-  </main>
+    <Box
+      sx={{
+        position: "sticky",
+        bottom: 0,
+        p: 2,
+        pb: 0,
+        bgcolor: (theme) => theme.palette.background.paper,
+      }}
+    >
+      <PageContainer>
+        <Typography align="center" variant="h6">
+          Place your order
+        </Typography>
+        <SocialIcons horizontal />
+      </PageContainer>
+    </Box>
+  </Box>
 );
