@@ -1,5 +1,4 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
-import Script from "next/script";
 
 class MyDocument extends Document {
   render() {
@@ -36,19 +35,6 @@ class MyDocument extends Document {
           />
           <meta name="msapplication-TileColor" content="#da532c" />
           <meta name="theme-color" content="#2d57b4" />
-          <Script
-            src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
-            strategy="afterInteractive"
-          />
-          <Script id="google-analytics" strategy="afterInteractive">
-            {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){window.dataLayer.push(arguments);}
-              gtag('js', new Date());
-
-              gtag('config', 'G-CL1EH1XVGH');
-            `}
-          </Script>
         </Head>
         <body>
           <Main />
