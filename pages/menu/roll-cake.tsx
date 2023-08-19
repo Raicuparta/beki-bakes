@@ -48,7 +48,7 @@ const Menu = () => (
       <MenuItem
         title="Assorted Box"
         description='3 half-size rolls of each flavour and 4 "Hup Toh Soh" Walnut cookies'
-        price="32"
+        price="35"
       >
         <Stack>
           <Stack direction="row" spacing={1} sx={{ alignItems: "center" }}>

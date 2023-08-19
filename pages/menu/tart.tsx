@@ -6,6 +6,8 @@ import {
   RubyPyramidIcon,
   SpecificIconProps,
   TartIcon,
+  PecanTartIcon,
+  LemonTartIcon,
 } from "../../components/icons";
 import { MenuItem } from "../../components/MenuItem";
 import { MenuPageContainer } from "../../components/MenuPageContainer";
@@ -33,9 +35,23 @@ const Menu = () => (
       <MenuItem
         title="Matcha Ganache"
         description="Pate Sablee crust filled with Matcha white chocolate ganache and matcha glaze"
-        price="12"
+        price="15"
       >
         <MatchaTartIcon />
+      </MenuItem>
+      <MenuItem
+        title="Pecan"
+        description="Pate Sablee crust filled with crushed pecan brown butter filling top with toasted pecans"
+        price="15"
+      >
+        <PecanTartIcon />
+      </MenuItem>
+      <MenuItem
+        title="Lemon"
+        description="Pate Sablee crust filled with lemon curd and top with toasted lemon meringue"
+        price="15"
+      >
+        <LemonTartIcon />
       </MenuItem>
       <MenuItem
         title="Matcha Fuji Strawberry Mousse"
